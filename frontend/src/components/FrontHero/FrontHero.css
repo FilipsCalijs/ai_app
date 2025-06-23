@@ -1,0 +1,184 @@
+.front-hero {
+
+    width: 100%;        /* Чтобы адаптировалось под экран */
+    margin: 0 auto;
+    padding: 20px 0 ;
+    font-family: Manrope, sans-serif;
+    color: #222222;
+    background-color: #070518;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .front-hero__header {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  
+  .front-hero__logo img {
+    display: block;
+    max-height: 50px;
+    width: auto;
+    border-radius: 8px;
+  }
+  
+  .front-hero__header-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-button {
+    background: #6a5af9;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 24px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #6a5af9;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+    user-select: none;
+  }
+  
+  .header-button:hover,
+  .header-button:focus {
+    background-color: #5746c6;
+    box-shadow: 0 0 20px #6a5af9;
+    outline: none;
+  }
+  
+  .header-button.telegram {
+    background: #0088cc; /* Telegram blue */
+    box-shadow: 0 0 10px #0088cc;
+  }
+  
+  .header-button.telegram:hover,
+  .header-button.telegram:focus {
+    background-color: #006699;
+    box-shadow: 0 0 20px #0088cc;
+  }
+  
+  .header-button.support {
+    background: #f95a6a; /* Support red/pink */
+    box-shadow: 0 0 10px #f95a6a;
+  }
+  
+  .header-button.support:hover,
+  .header-button.support:focus {
+    background-color: #c43d4a;
+    box-shadow: 0 0 20px #f95a6a;
+  }
+  
+  .front-hero__content {
+    display: flex;
+    gap: 60px; /* Больше отступ между текстом и медиа */
+    align-items: center;
+    width: 100%;
+    justify-content: center; /* Выравнивание по центру */
+    max-width: 1400px; 
+  }
+  
+  .front-hero__text {
+    color: #ffffff;
+    max-width: 400px; /* Можно увеличить, если нужно */
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 32px;
+;
+  }
+  .FrontHero-Text{
+    color: #ffffff;
+  }
+  
+  .front-hero__text h2 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  
+
+  
+  .glow-button {
+    background: linear-gradient(45deg, #FF8800, #FF8800);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 14px 48px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #FF8800, 0 0 25px #FF8800;
+    transition: box-shadow 0.3s ease-in-out;
+    user-select: none;
+  }
+  
+  .glow-button:hover,
+  .glow-button:focus {
+    box-shadow:
+      0 0 15px #6a5af9,
+      0 0 40px #f95a6a,
+      0 0 50px #f95a6a,
+      0 0 70px #6a5af9;
+    outline: none;
+  }
+  
+  .front-hero__media {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .front-hero__image,
+  .front-hero__video {
+    width: 350px;
+    height: 210px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.25),  /* мягкое белое свечение */
+      0 60px 18px rgba(0, 0, 0, 0.2);       /* тенюшка под низом */
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  
+  .front-hero__tabs {
+    display: flex;
+    gap: 24px;
+    margin-top: 40px;
+  }
+  
+  .tab {
+
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #555555;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+  }
+  
+  .tab:hover {
+    background-color: #6a5af9;
+    color: white;
+    box-shadow: 0 0 15px #6a5af9;
+  }
+  
+  .tab.active {
+    background-color: #6a5af9;
+    color: white;
+    box-shadow: 0 0 25px #6a5af9;
+  }
