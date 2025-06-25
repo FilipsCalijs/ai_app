@@ -1,0 +1,151 @@
+.container {
+    padding: 2rem;
+    max-width: 1150px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    color: white;
+
+  }
+  
+  .content-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .text-content {
+    flex: 1 1 400px;
+    max-width: 650px;
+    text-align: left;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  
+  .line-break {
+    display: none;
+  }
+  
+  .description {
+    max-width: 343px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  .try-button {
+    background: linear-gradient(45deg, #ff8c00, #ff7801, #ff3915);
+    padding: 1rem 2.5rem;
+
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(255, 94, 0, 0.4);
+    transition: filter 0.3s ease;
+  }
+  
+  .try-button:hover {
+    filter: brightness(1.1);
+  }
+  
+  .slider-wrapper {
+    flex: 1 1 600px;
+    max-width: 600px;
+    position: relative;
+    width: 100%;
+    background-color: #161616; /* темный фон */
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    border-radius: 1.5rem;
+    aspect-ratio: 16 / 9;
+    height: 400px;
+    width: 100%;
+    background-color: #161616;
+    /* border: none; */ /* убираем border */
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616; /* темный фон */
+    overflow-x: hidden; /* запретить прокрутку */
+  }
+  
+  .slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .slider-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #ff7801;
+    opacity: 0.7;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .slider-nav a:hover,
+  .slider-nav a:focus {
+    opacity: 1;
+    outline: none;
+  }
+ 
+  
+  /* Адаптив для мобильных */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-content {
+      max-width: 100%;
+    }
+  
+    .line-break {
+      display: inline;
+    }
+  
+    .slider-wrapper {
+      max-width: 100%;
+    }
+  
+    .slider {
+      height: 300px;
+    }
+  }
