@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+body{background-color: #070518}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +36,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.front-hero__content {
+  animation: slideUpFadeIn 0.8s ease forwards;
+  /* forwards — чтобы сохранить конечное состояние */
+  /* Можно добавить задержку, если нужно */
 }

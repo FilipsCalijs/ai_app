@@ -41,14 +41,14 @@ const FrontHero = () => {
         <div className="front-hero__media">
           <img
             className="front-hero__image"
-            src="https://clothoff.info/wp-content/uploads/2025/06/undress-vide-ai-1.png"
+            src="/preview-photo/undress.png"
             alt="Undress AI preview"
             width={200}
             height={200}
           />
           <video
             className="front-hero__video"
-            src="https://clothoff.info/wp-content/uploads/2025/06/video_undress-ai.mp4"
+            src="/preview-photo/undress.mp4"
             autoPlay
             loop
             muted
