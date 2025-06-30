@@ -1,0 +1,126 @@
+:root {
+    --color-orange: #FF8800;
+    --color-dark-purple: #070518;
+    --color-white: #ffffff;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(7, 5, 24, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal {
+    width: 90%;
+    max-width: 400px;
+    background-color: var(--color-dark-purple);
+    color: var(--color-white);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .slide-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .slide-image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .slide-image-box img {
+    width: 140px;
+    height: 210px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  
+  .label {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .label.good {
+    color: limegreen;
+  }
+  
+  .label.bad {
+    color: var(--color-orange);
+  }
+  
+  .slide-text {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+  
+  .progress-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    width: 24px;
+    background-color: var(--color-orange);
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  
+  .back-button,
+  .next-button {
+    flex: 1;
+    padding: 14px 0;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .back-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+  }
+  
+  .back-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  .next-button {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    box-shadow: 0 0 10px var(--color-orange);
+  }
+  

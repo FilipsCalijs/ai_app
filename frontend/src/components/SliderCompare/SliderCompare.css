@@ -128,6 +128,7 @@
   
   /* Адаптив для мобильных */
   @media (max-width: 768px) {
+
     .content-wrapper {
       flex-direction: column;
       text-align: center;
@@ -143,6 +144,8 @@
   
     .slider-wrapper {
       max-width: 100%;
+      height: 100%;
+      flex: none;
     }
   
     .slider {

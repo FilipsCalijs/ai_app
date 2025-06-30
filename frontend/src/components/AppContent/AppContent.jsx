@@ -1,18 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-
-import TopBanner from "./components/TopBanner/TopBanner";
-import FrontHero from "./components/FrontHero/FrontHero";
-import Review from "./components/Review/Review";
-import HowWork from "./components/HowWork/HowWork";
-import SliderCompare from "./components/SliderCompare/SliderCompare";
-import FAQ from "./components/FAQ/FAQ";
-import Footer from "./components/Footer/Footer";
-import ModalWindow from "./components/ModalWindow/ModalWindow";
-
-import PrivateRoute from "./components/PrivateRoute";
-import Signup from "./pages/Signup";
-import CreateImage from "./components/CreateImage/CreateImage";
+import PrivateRoute from "../PrivateRoute"; // путь подкорректируй
+import Signup from "./pages/Signup"; // сделай эту страницу сам
 
 function AppContent() {
   const location = useLocation();
@@ -24,7 +11,7 @@ function AppContent() {
     if (location.pathname === "/create-image") {
       timer = setTimeout(() => {
         setShowModal(true);
-      }, 5000); // ждем 5 секунд
+      }, 5000); // исправил на 5000 мс как в твоём условии
     } else {
       setShowModal(false);
     }
@@ -54,20 +41,12 @@ function AppContent() {
           path="/create-image"
           element={
             <PrivateRoute>
-                <CreateImage />
+              <h1>Create Image Page</h1>
             </PrivateRoute>
           }
         />
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </>
-  );
-}
-
-export default function App() {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
   );
 }

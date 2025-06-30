@@ -1,56 +1,95 @@
-.App {
-  text-align: center;
-}
-body{background-color: #070518}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 5, 24, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.modal {
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--color-dark-purple);
+  color: var(--color-white);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.slide {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 16px;
+}
+
+.slide-images {
+  display: flex;
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.slide-image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide-image-box img {
+  width: 140px;
+  height: 210px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
-@keyframes slideUpFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.label {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-.front-hero__content {
-  animation: slideUpFadeIn 0.8s ease forwards;
-  /* forwards — чтобы сохранить конечное состояние */
-  /* Можно добавить задержку, если нужно */
+.label.good {
+  color: limegreen;
+}
+
+.label.bad {
+  color: var(--color-orange);
+}
+
+.slide-text {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+.modal-buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal-button {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--color-orange);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.modal-button:hover {
+  box-shadow: 0 0 20px var(--color-orange);
 }

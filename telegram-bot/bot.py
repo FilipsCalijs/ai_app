@@ -1,69 +1,62 @@
 from aiogram import Bot, Dispatcher, types
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.filters import Command
+from aiogram.types import BufferedInputFile
+import aiohttp
 import asyncio
-import os
+import io
 
-API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
+
+
+API_TOKEN = ''
+SERVER_URL = 'http://127.0.0.1:8000/process_image'
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
-# Клавиатура с кнопкой "Начать"
-start_keyboard = ReplyKeyboardMarkup(
-    keyboard=[[KeyboardButton(text="Начать")]],
-    resize_keyboard=True
-)
+processing_users = set()
 
-# Inline-клавиатура с кнопкой "Согласен"
-agree_inline_keyboard = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [InlineKeyboardButton(text="Согласен", callback_data="agree")]
-    ]
-)
+@dp.message(Command("start"))
+async def cmd_start(message: types.Message):
+    print("/Start")
+    await message.answer("Привет! Пожалуйста, пришли мне фотографию.")
 
-# Inline-клавиатура выбора языка
-language_inline_keyboard = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [
-            InlineKeyboardButton(text="🇷🇺 Русский", callback_data="lang_ru"),
-            InlineKeyboardButton(text="🇺🇸 English", callback_data="lang_en")
-        ]
-    ]
-)
+@dp.message()
+async def handle_message(message: types.Message):
+    user_id = message.from_user.id
 
-user_agreements = set()
+    if user_id in processing_users:
+        await message.answer("Пожалуйста, подождите, идёт обработка изображения.")
+        return
 
-@dp.message(lambda message: message.text == "Начать")
-async def start_button_handler(message: types.Message):
-    await message.answer(
-        "Пожалуйста, ознакомьтесь с условиями конфиденциальности:\n\n"
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        reply_markup=agree_inline_keyboard
-    )
+    if message.photo:
+        processing_users.add(user_id)
 
-@dp.callback_query(lambda c: c.data == "agree")
-async def agree_callback_handler(callback_query: types.CallbackQuery):
-    user_id = callback_query.from_user.id
-    user_agreements.add(user_id)
-    await callback_query.message.edit_text("Спасибо за согласие! Теперь выберите язык:")
-    await callback_query.message.edit_reply_markup(reply_markup=language_inline_keyboard)
-    await callback_query.answer()
+        photo = message.photo[-1]
+        file = await bot.get_file(photo.file_id)
+        file_bytes = await bot.download_file(file.file_path)
 
-@dp.message(lambda message: message.from_user.id not in user_agreements and message.text not in ["Начать"])
-async def block_without_agreement(message: types.Message):
-    await message.answer("Пожалуйста, сначал'Начать' и согласитесь с условиями.")
+        data = aiohttp.FormData()
+        data.add_field('file', file_bytes, filename='photo.jpg', content_type='image/jpeg')
 
-@dp.callback_query(lambda c: c.data and c.data.startswith("lang_"))
-async def language_callback_handler(callback_query: types.CallbackQuery):
-    lang_code = callback_query.data.split("_")[1]
-    if lang_code == "ru":
-        await callback_query.message.answer("Вы выбрали русский язык 🇷🇺")
-    elif lang_code == "en":
-        await callback_query.message.answer("You selected English 🇺🇸")
-    await callback_query.answer()
+        async with aiohttp.ClientSession() as session:
+            async with session.post(SERVER_URL, data=data) as resp:
+                if resp.status == 200:
+                    processed_image_bytes = await resp.read()
+                    photo_io = io.BytesIO(processed_image_bytes)
+                    photo_io.seek(0)
+                    input_file = BufferedInputFile(photo_io.read(), filename="processed.jpg")
+                    print("photo uploaded")
+                    await message.answer_photo(input_file)
+                else:
+                    await message.answer("Ошибка при обработке изображения на сервере.")
+
+        processing_users.remove(user_id)
+    else:
+        await message.answer("Пожалуйста, пришли фотографию.")
 
 async def main():
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, skip_updates=True)
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     asyncio.run(main())
