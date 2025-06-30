@@ -1,5 +1,7 @@
 import React from "react";
 import "./FrontHero.css";
+import { useNavigate } from 'react-router-dom';
+
 
 const FrontHeroHeader = () => {
   return (
@@ -22,6 +24,7 @@ const FrontHeroHeader = () => {
 };
 
 const FrontHero = () => {
+  const navigate = useNavigate();
   return (
     <section className="front-hero">
       <FrontHeroHeader />
@@ -36,19 +39,25 @@ const FrontHero = () => {
             image, customize settings, and let our nudify AI deliver stunning
             undressed results in seconds.
           </p>
-          <button className="glow-button">Try for free</button>
+          <button
+          className="glow-button"
+          onClick={() => navigate('/create-image')}
+        >
+            Try for free
+          </button>
+
         </div>
         <div className="front-hero__media">
           <img
             className="front-hero__image"
-            src="https://clothoff.info/wp-content/uploads/2025/06/undress-vide-ai-1.png"
+            src="/preview-photo/undress.png"
             alt="Undress AI preview"
             width={200}
             height={200}
           />
           <video
             className="front-hero__video"
-            src="https://clothoff.info/wp-content/uploads/2025/06/video_undress-ai.mp4"
+            src="/preview-photo/undress.mp4"
             autoPlay
             loop
             muted

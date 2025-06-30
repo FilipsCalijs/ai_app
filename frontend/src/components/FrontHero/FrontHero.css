@@ -182,3 +182,31 @@
     color: white;
     box-shadow: 0 0 25px #6a5af9;
   }
+
+  @media (max-width: 7й00px) {
+    .front-hero__content {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px; /* увеличенный отступ между текстом и медиа */
+    }
+  
+    .front-hero__text {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .front-hero__media {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .front-hero__image,
+    .front-hero__video {
+      width: 90vw; /* адаптивная ширина */
+      max-width: 350px;
+      height: auto;
+    }
+  }

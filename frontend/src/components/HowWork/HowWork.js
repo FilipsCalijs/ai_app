@@ -5,8 +5,17 @@ const HowWork = () => {
   return (
     <section className="howwork-container">
       <div className="howwork-image">
-        <img src="/example.png" alt="Preview" />
-      </div>
+  <video
+    src="/preview-photo/exemple.mp4"
+    alt="Pcreview"
+    autoPlay
+    loop
+    muted
+    playsInline
+    controls={false} // если не хочешь показывать контролы
+    style={{ width: '100%', height: 'auto' }} // адаптивный размер
+  />
+</div>
       <div className="howwork-content">
         <h2>How does SmartAI Tool work?</h2>
         <p>
