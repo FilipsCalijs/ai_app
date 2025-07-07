@@ -1,29 +1,21 @@
-import { auth } from "../components/firebase/firebase";
+import { auth } from "../components/firebase/firebase"; // импорт auth один раз
 import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signInWithPopup,
+  sendSignInLinkToEmail,
   GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 
-// Регистрация по email и паролю
-export const doCreateUserWithEmailAndPassword = (email, password) => {
-  return createUserWithEmailAndPassword(auth, email, password);
+const actionCodeSettings = {
+  url: window.location.origin + "/signup", // или "/login"
+  handleCodeInApp: true,
 };
 
-// Вход по email и паролю
-export const doSignInWithEmailAndPassword = (email, password) => {
-  return signInWithEmailAndPassword(auth, email, password);
+export const sendSignInLink = (email) => {
+  return sendSignInLinkToEmail(auth, email, actionCodeSettings);
 };
 
-// Вход через Google
 export const doSignInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
   const result = await signInWithPopup(auth, provider);
   return result.user;
-};
-
-// Выход
-export const doSignOut = () => {
-  return auth.signOut();
 };

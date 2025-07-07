@@ -1,11 +1,12 @@
 import React from "react";
 import { useAuth } from "../AuthContext/AuthContext";
-
+import Footer from "../Footer/Footer";
 const CreateImage = () => {
   const { currentUser } = useAuth();
 
   return (
     <div style={{ padding: "100px", textAlign: "center" }}>
+      <Footer />
       <h1>Create Image Page</h1>
       {currentUser ? (
         <p>Вы вошли как: <b>{currentUser.email}</b></p>

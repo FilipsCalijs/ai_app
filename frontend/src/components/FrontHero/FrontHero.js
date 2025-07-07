@@ -2,50 +2,49 @@ import React from "react";
 import "./FrontHero.css";
 import { useNavigate } from 'react-router-dom';
 
-
 const FrontHeroHeader = () => {
   return (
     <div className="front-hero__header">
       <div className="front-hero__logo">
         <img
-          src="logo.png"
+          src="logo-removebg-preview.png"
           alt="Logo"
           width={50}
           height={50}
-        /> 
-        logo
+        />
+        <div><span style={{ color: '#FF8800' }}>Un</span>dressor</div>
       </div>
+
       <div className="front-hero__header-buttons">
-        <button className="header-button telegram">Telegram</button>
-        <button className="header-button support">Support</button>
+        <a className="header-button telegram" href="https://t.me/TestBeta123bot" target="_blank" rel="noopener noreferrer">
+          Telegram
+        </a>
       </div>
     </div>
   );
 };
 
 const FrontHero = () => {
-  const navigate = useNavigate();
   return (
     <section className="front-hero">
       <FrontHeroHeader />
 
       <div className="front-hero__content">
         <div className="front-hero__text">
-        <h2 className="FrontHero-Title">
-        Undress <span style={{ color: '#FF8800' }}>Photo & Video</span> online for Free
-        </h2>
+          <h2 className="FrontHero-Title">
+            Most Powerful <span style={{ color: '#FF8800' }}> AI Clothes </span>Remover Tool
+          </h2>
           <p className="FrontHero-Text">
-            With ClothOff, undressing photos has never been easier. Upload your
-            image, customize settings, and let our nudify AI deliver stunning
-            undressed results in seconds.
+            Undressor uses the most advanced AI technologies to make your photos look as realistic as possible. Upload your image, customize the settings, and create your perfect look!
           </p>
-          <button
-          className="glow-button"
-          onClick={() => navigate('/create-image')}
-        >
+          <a
+            className="glow-button"
+            href="https://t.me/TestBeta123bot"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Try for free
-          </button>
-
+          </a>
         </div>
         <div className="front-hero__media">
           <img
@@ -55,21 +54,9 @@ const FrontHero = () => {
             width={200}
             height={200}
           />
-          <video
-            className="front-hero__video"
-            src="/preview-photo/undress.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            controlsList="nodownload"
-            aria-label="Undress AI video"
-            width={200}
-            height={200}
-          />
+         
         </div>
       </div>
-
     </section>
   );
 };

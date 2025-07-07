@@ -1,58 +1,186 @@
+:root {
+  /* вставь сюда все переменные из твоего второго блока */
+  --dark-grey-hex: #050917;
+  --primary-orange: 6600;
+  --primary-violet: #3f1e78;
+
+  /* остальные переменные из блока, например: */
+  --font-family-main: Manrope, sans-serif;
+  --font-size-title: 3rem;
+  --font-weight-title: 700;
+  --font-line-height-title: 1.2;
+
+  --font-size-text: 1.25rem;
+  --font-weight-text: 400;
+  --font-line-height-text: 1.5;
+
+  --font-size-button: 1rem;
+  --font-weight-button: 600;
+
+  --border-radius-big: 30px;
+}
+
+/* Контейнер без изменений */
 .howwork-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-grey-hex);
+  color: #ffffff;
+  padding: 30px 20px;
+  gap: 80px;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  font-family: var(--font-family-main);
+}
+
+/* Изображения остаются как есть */
+.howwork-image {
+  position: relative;
+  width: 400px;
+  height: 320px;
+  flex-shrink: 0;
+}
+
+.howwork-image-bg {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 240px;
+  height: auto;
+  box-shadow: 0 0 25px 6px var(--primary-orange);
+  border-radius: 20px;
+  transform: rotate(-15deg);
+  z-index: 0;
+  filter: blur(0.5px);
+}
+
+.howwork-image-main {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 260px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px 6px var(--primary-violet);
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+/* Контент: задаём шрифты и размеры из переменных */
+.howwork-content {
+  max-width: 600px;
+  font-family: var(--font-family-main);
+}
+
+.howwork-content h2 {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-title);
+  line-height: var(--font-line-height-title);
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.howwork-content p {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-text);
+  line-height: var(--font-line-height-text);
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.howwork-content ol {
+  padding-left: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-text);
+  line-height: var(--font-line-height-text);
+}
+
+.howwork-content li {
+  margin-bottom: 12px;
+}
+
+/* Кнопка в стиле "glow" из твоего второго блока с градиентом и плавной анимацией */
+.try-btn {
+  background: linear-gradient(to right, var(--primary-orange), var(--primary-violet));
+  border: none;
+  padding: 14px 48px;
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-button);
+  border-radius: var(--border-radius-big);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--primary-violet);
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+  user-select: none;
+}
+
+.try-btn:hover,
+.try-btn:focus {
+  opacity: 0.9;
+  box-shadow:
+    0 0 15px var(--primary-orange),
+    0 0 40px var(--primary-violet),
+    0 0 50px var(--primary-violet);
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .howwork-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 0;
+  }
+  .howwork-image {
+    position: relative;
+    width: 100%;
+    height: auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #121212;
-    color: #ffffff;
-    padding: 50px 20px;
-    gap: 40px;
-    flex-wrap: wrap;
+    margin-bottom: 2rem;
   }
-  
-  .howwork-image img {
-    width: 250px;
-    border-radius: 16px;
-    box-shadow: 0 0 20px 5px #ff6600;
-    transform: rotate(-10deg);
+
+  .howwork-image-bg,
+  .howwork-image-main {
+    position: relative;
+    transform: none;
+    left: 0;
+    top: 0;
+    width: 80%;
+    max-width: 260px;
+    margin: 0 auto;
   }
-  
+
+  .howwork-image-bg {
+    z-index: 0;
+    filter: blur(1px);
+    margin-bottom: -40px;
+    transform: rotate(-5deg);
+  }
+
+  .howwork-image-main {
+    z-index: 1;
+    transform: rotate(5deg);
+  }
+
   .howwork-content {
-    max-width: 500px;
+    max-width: 100%;
+    padding: 0 10px;
   }
-  
+
   .howwork-content h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
-  .howwork-content p {
-    font-size: 16px;
-    color: #bbbbbb;
-    margin-bottom: 20px;
-  }
-  
+
+  .howwork-content p,
   .howwork-content ol {
-    padding-left: 20px;
-    margin-bottom: 30px;
+    font-size: 1rem;
   }
-  
-  .howwork-content li {
-    margin-bottom: 12px;
-  }
-  
+
   .try-btn {
-    background: linear-gradient(to right, #ff6600, #ff3300);
-    border: none;
-    padding: 14px 28px;
-    font-size: 16px;
-    border-radius: 24px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(255, 102, 0, 0.3);
+    padding: 12px 32px;
+    font-size: 1rem;
+    margin-top: 20px;
   }
-  
-  .try-btn:hover {
-    opacity: 0.9;
-  }
-  
+}

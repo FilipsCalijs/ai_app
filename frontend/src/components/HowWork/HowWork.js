@@ -1,21 +1,24 @@
 import React from "react";
 import "./HowWork.css";
+import "../../App.css";
 
 const HowWork = () => {
   return (
     <section className="howwork-container">
       <div className="howwork-image">
-  <video
-    src="/preview-photo/exemple.mp4"
-    alt="Pcreview"
-    autoPlay
-    loop
-    muted
-    playsInline
-    controls={false} // если не хочешь показывать контролы
-    style={{ width: '100%', height: 'auto' }} // адаптивный размер
+  <img
+    src="/preview-photo/bg.png"
+    alt="Background shape"
+    className="howwork-image-bg"
+  />
+  <img
+    src="/preview-photo/undress.png"
+    alt="Preview"
+    className="howwork-image-main"
   />
 </div>
+
+
       <div className="howwork-content">
         <h2>How does SmartAI Tool work?</h2>
         <p>
@@ -28,7 +31,8 @@ const HowWork = () => {
           <li><strong>Choose a generation mode</strong></li>
           <li><strong>Upload your image or file to get results</strong></li>
         </ol>
-        <button className="glow-button">Try for free</button>
+     
+
       </div>
     </section>
   );

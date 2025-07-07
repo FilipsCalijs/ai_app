@@ -36,18 +36,19 @@ const SliderCompare = () => {
   }, [slideCount]);
 
   return (
-    <div style={{backgroundColor:'#161616'}}>
+    <div style={{backgroundColor:''}}>
     <section className="container">
       <div className="content-wrapper">
         {/* Текстовая часть */}
         <div className="text-content">
           <h2 className="title">
-            How it<br className="line-break" />looks like?
+            How <span>it looks</span> like?
           </h2>
           <p className="description">
             When you upload an image, online Undress AI program will promptly process it and deliver the highest quality result even with free trial account.
           </p>
-          <button className="try-button">Try for free</button>
+          <a class="glow-button" href="https://t.me/TestBeta123bot" target="_blank" rel="noopener noreferrer">Try for free</a>
+
         </div>
 
         {/* Слайдер */}

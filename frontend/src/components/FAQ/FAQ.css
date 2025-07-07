@@ -1,10 +1,17 @@
 .faq-container {
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    font-family: 'Inter', sans-serif;
 
-  }
+  margin: 0;              /* Убираем отступы */
+  padding: 2rem;          /* Добавляем внутренние отступы */
+  font-family: 'Inter', sans-serif;
+  background-color: #0d071e; /* Серый фон */
+  box-sizing: border-box; /* Чтобы padding не влиял на ширину */
+  margin: 0 auto;
+    max-width: 1200px;
+}
+.p-faq{
+  color: white;
+}
+
   
   .faq-title {
     font-size: 2.5rem;
@@ -30,8 +37,8 @@
     width: 100%;
     background: none;
     border: none;
-    color: #ff7801;
-    font-size: 1.25rem;
+    color: #FF8800;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: left;
     cursor: pointer;
@@ -44,7 +51,7 @@
   
   .faq-question:hover,
   .faq-question:focus {
-    color: #ffa040;
+    color: #FF8800;
     outline: none;
   }
   
@@ -64,7 +71,7 @@
     max-height: 0;
     transition: max-height 0.4s ease;
 
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin-top: 0.5rem;
   }
@@ -75,9 +82,7 @@
   
   /* Адаптив для мобильных */
   @media (max-width: 480px) {
-    .faq-container {
-      padding: 0 0.5rem;
-    }
+    
   
     .faq-title {
       font-size: 2rem;
