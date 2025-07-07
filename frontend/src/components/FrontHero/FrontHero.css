@@ -1,212 +1,233 @@
+:root {
+  --color-bg-main: #0d071e;
+  --color-text-main: #222222;
+  --color-text-light: ffff;
+  --color-primary: #6a5af9;
+  --color-primary-hover: #5746c6;
+  --color-primary-shadow: #6a5af9;
+  --color-telegram: #0088cc;
+  --color-telegram-hover: #006699;
+  --color-telegram-shadow: #0088cc;
+  --color-glow: #FF8800;
+  --color-glow-hover1: #6a5af9;
+  --color-glow-hover2: #f95a6a;
+
+  --padding-vertical: 20px;
+  --gap-main: 20px;
+  --gap-content: 60px;
+
+  --font-family-main: Manrope, sans-serif;
+  --font-size-title: 3rem;
+  --font-size-text: 1.25rem;
+  --font-weight-title: 700;
+  --font-weight-text: 400;
+}
+
 .front-hero {
+  width: 100%;
 
-    width: 100%;        /* Чтобы адаптировалось под экран */
-    margin: 0 auto;
-    padding: 20px 0 ;
-    font-family: Manrope, sans-serif;
-    color: #222222;
-    background-color: #070518;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .front-hero__header {
-    width: 100%;
-    max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--padding-vertical) 0;
+  font-family: var(--font-family-main);
+  color: var(--color-text-main);
+  background: var(--color-bg-main);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-main);
+  align-items: center;
+}
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    box-sizing: border-box;
-  }
+.front-hero__header {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.front-hero__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  user-select: none;
+  cursor: default;
+}
+
+.front-hero__logo img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.front-hero__header-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-button {
+  background: var(--color-primary);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--color-primary-shadow);
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+  user-select: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.header-button:hover,
+.header-button:focus {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 0 20px var(--color-primary-shadow);
+  outline: none;
+}
+
+.header-button.telegram {
+  background: var(--color-telegram);
+  box-shadow: 0 0 10px var(--color-telegram-shadow);
+}
+
+.header-button.telegram:hover,
+.header-button.telegram:focus {
+  background-color: var(--color-telegram-hover);
+  box-shadow: 0 0 20px var(--color-telegram-shadow);
+}
+
+.front-hero__content {
+  display: flex;
+  gap: var(--gap-content);
+  align-items: center;
+  width: 1000px;
+  justify-content: center;
   
-  .front-hero__logo img {
-    display: block;
-    max-height: 50px;
-    width: auto;
-    border-radius: 8px;
-  }
-  
-  .front-hero__header-buttons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .header-button {
-    background: #6a5af9;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 10px 24px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #6a5af9;
-    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease;
-    user-select: none;
-  }
-  
-  .header-button:hover,
-  .header-button:focus {
-    background-color: #5746c6;
-    box-shadow: 0 0 20px #6a5af9;
-    outline: none;
-  }
-  
-  .header-button.telegram {
-    background: #0088cc; /* Telegram blue */
-    box-shadow: 0 0 10px #0088cc;
-  }
-  
-  .header-button.telegram:hover,
-  .header-button.telegram:focus {
-    background-color: #006699;
-    box-shadow: 0 0 20px #0088cc;
-  }
-  
-  .header-button.support {
-    background: #f95a6a; /* Support red/pink */
-    box-shadow: 0 0 10px #f95a6a;
-  }
-  
-  .header-button.support:hover,
-  .header-button.support:focus {
-    background-color: #c43d4a;
-    box-shadow: 0 0 20px #f95a6a;
-  }
-  
+
+
+}
+
+.front-hero__text {
+  color: var(--color-text-light);
+  max-width: 500px;
+  font-weight: var(--font-weight-text);
+  font-size: var(--font-size-text);
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.front-hero__text h2 {
+  font-weight: var(--font-weight-title);
+  font-size: var(--font-size-title);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.FrontHero-Text {
+  color: var(--color-text-light);
+}
+
+.glow-button {
+  background: linear-gradient(45deg, var(--color-glow), var(--color-glow));
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 14px 48px;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--color-glow), 0 0 25px var(--color-glow);
+  transition: box-shadow 0.3s ease-in-out;
+  user-select: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.glow-button:hover,
+.glow-button:focus {
+  box-shadow:
+    0 0 15px var(--color-glow-hover1),
+    0 0 40px var(--color-glow-hover2),
+    0 0 50px var(--color-glow-hover2),
+    0 0 70px var(--color-glow-hover1);
+  outline: none;
+}
+
+.front-hero__media {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.front-hero__image,
+.front-hero__video {
+  width: 500px;
+  height: 600px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.25),
+    0 60px 18px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+:root {
+  --color-text-light: #fff; /* исправил на валидный цвет */
+}
+
+@media (max-width: 1000px) {
   .front-hero__content {
-    display: flex;
-    gap: 60px; /* Больше отступ между текстом и медиа */
+    flex-direction: column;
     align-items: center;
-    width: 100%;
-    justify-content: center; /* Выравнивание по центру */
-    max-width: 1400px; 
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 400px;
   }
-  
-  .front-hero__text {
-    color: #ffffff;
-    max-width: 400px; /* Можно увеличить, если нужно */
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: 32px;
-;
-  }
-  .FrontHero-Text{
-    color: #ffffff;
-  }
-  
-  .front-hero__text h2 {
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 16px;
-  }
-  
 
-  
+  .front-hero__text {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.1rem; /* чуть увеличил читаемость */
+  }
+
+  .front-hero__text h2 {
+    font-size: 2rem; /* уменьшил заголовок для мобилки */
+  }
+
   .glow-button {
-    background: linear-gradient(45deg, #FF8800, #FF8800);
-    border: none;
-    border-radius: 30px;
-    color: white;
-    font-weight: 700;
-    font-size: 1.25rem;
-    padding: 14px 48px;
-    cursor: pointer;
-    box-shadow: 0 0 10px #FF8800, 0 0 25px #FF8800;
-    transition: box-shadow 0.3s ease-in-out;
-    user-select: none;
+    width: 100%; /* кнопка растягивается по ширине */
+    max-width: 320px;
+    padding: 14px 0;
+    font-size: 1.2rem;
   }
-  
-  .glow-button:hover,
-  .glow-button:focus {
-    box-shadow:
-      0 0 15px #6a5af9,
-      0 0 40px #f95a6a,
-      0 0 50px #f95a6a,
-      0 0 70px #6a5af9;
-    outline: none;
-  }
-  
+
   .front-hero__media {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    gap: 15px;
   }
-  
+
   .front-hero__image,
   .front-hero__video {
-    width: 350px;
-    height: 210px;
-    border-radius: 16px;
-    object-fit: cover;
+    width: 90vw;
+    max-width: 350px;
+    height: auto;
     box-shadow:
-      0 0 20px rgba(255, 255, 255, 0.25),  /* мягкое белое свечение */
-      0 60px 18px rgba(0, 0, 0, 0.2);       /* тенюшка под низом */
-    transition: box-shadow 0.3s ease-in-out;
+      0 0 15px rgba(255, 136, 0, 0.7),
+      0 40px 12px rgba(0, 0, 0, 0.15);
   }
-  
-  
-  .front-hero__tabs {
-    display: flex;
-    gap: 24px;
-    margin-top: 40px;
-  }
-  
-  .tab {
+}
 
-    border-radius: 30px;
-    padding: 14px 36px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #555555;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    user-select: none;
-  }
-  
-  .tab:hover {
-    background-color: #6a5af9;
-    color: white;
-    box-shadow: 0 0 15px #6a5af9;
-  }
-  
-  .tab.active {
-    background-color: #6a5af9;
-    color: white;
-    box-shadow: 0 0 25px #6a5af9;
-  }
-
-  @media (max-width: 7й00px) {
-    .front-hero__content {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px; /* увеличенный отступ между текстом и медиа */
-    }
-  
-    .front-hero__text {
-      max-width: 100%;
-      text-align: center;
-    }
-  
-    .front-hero__media {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    .front-hero__image,
-    .front-hero__video {
-      width: 90vw; /* адаптивная ширина */
-      max-width: 350px;
-      height: auto;
-    }
-  }

@@ -1,50 +1,75 @@
 .review-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px;
- 
-    color: white;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 20px;
+  align-items: center;
+}
+
+/* Большие экраны: ряд с переносом */
+@media (min-width: 708px) {
+  .review-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
-  @media (min-width: 708px) {
-    .review-container {
-      flex-direction: row;
-      justify-content: center;
-    }
-  }
-  
   .review-card {
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    max-width: 300px;
+    padding: 1px;
+  }
+}
+
+/* Мобильные экраны: горизонтальный скролл */
+@media (max-width: 707px) {
+  .review-container {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+    gap: 16px;
+    padding: 20px 10px;
     width: 100%;
   }
-  
-  .review-emoji {
-    font-size: 36px;
-    margin-right: 16px;
+
+  .review-card {
+    min-width: 200px; /* фиксированная ширина карточки */
+    flex: 0 0 auto; /* не сжимать */
   }
-  
-  .review-text {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .review-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .review-subtitle {
-    color: #bbb;
-    margin-top: 4px;
-    font-size: 14px;
-  }
-  
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #1a102c, #110920);
+  border: 2px solid #3f1e78;
+  border-radius: 24px;
+  padding: 20px 10px;
+  width: 220px;
+
+  box-shadow: 0 0 16px rgba(111, 0, 255, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(136, 0, 255, 0.4);
+}
+
+.review-emoji {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.review-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.review-subtitle {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 6px;
+}

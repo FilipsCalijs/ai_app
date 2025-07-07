@@ -50,7 +50,7 @@ const FAQ = () => {
               aria-labelledby={`faq-question-${index}`}
               style={{ maxHeight: openIndex === index ? '500px' : '0' }}
             >
-              <p>{answer}</p>
+              <p className='p-faq'>{answer}</p>
             </div>
           </li>
         ))}

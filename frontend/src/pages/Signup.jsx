@@ -1,24 +1,47 @@
-import React, { useState } from "react";
-import { doCreateUserWithEmailAndPassword, doSignInWithGoogle } from "../components/firebaseAuth"; // путь подкорректируй
+import React, { useState, useEffect } from "react";
+import { sendSignInLink, doSignInWithGoogle } from "../components/firebaseAuth"; // пути подкорректируй
+import { auth } from "../components/firebase/firebase";
+import { isSignInWithEmailLink, signInWithEmailLink } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState(null);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  useEffect(() => {
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+      let emailFromStorage = window.localStorage.getItem("emailForSignIn");
+      if (!emailFromStorage) {
+        emailFromStorage = window.prompt("Пожалуйста, введите ваш email для подтверждения входа");
+      }
+      signInWithEmailLink(auth, emailFromStorage, window.location.href)
+        .then(() => {
+          window.localStorage.removeItem("emailForSignIn");
+          navigate("/create-image");
+        })
+        .catch((err) => {
+          setError(err.message);
+        });
+    }
+  }, [navigate]);
+
+  const handleEmailSubmit = async (e) => {
     e.preventDefault();
+    setError(null);
+    setMessage(null);
     try {
-      await doCreateUserWithEmailAndPassword(email, password);
-      navigate("/create-image");
+      await sendSignInLink(email);
+      window.localStorage.setItem("emailForSignIn", email);
+      setMessage("Ссылка для входа отправлена на вашу почту.");
     } catch (err) {
       setError(err.message);
     }
   };
 
-  const handleGoogleSignUp = async () => {
+  const handleGoogleSignIn = async () => {
+    setError(null);
     try {
       await doSignInWithGoogle();
       navigate("/create-image");
@@ -29,26 +52,16 @@ export default function Signup() {
 
   return (
     <div style={{ maxWidth: 400, margin: "0 auto", padding: 20 }}>
-      <h2 style={{ textAlign: "center" }}>Регистрация</h2>
-      {error && (
-        <p style={{ color: "red", textAlign: "center", marginBottom: 10 }}>
-          {error}
-        </p>
-      )}
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      <h2 style={{ textAlign: "center" }}>Вход или регистрация</h2>
+      {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+      {message && <p style={{ color: "green", textAlign: "center" }}>{message}</p>}
+
+      <form onSubmit={handleEmailSubmit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Введите ваш email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
-          style={{ padding: 8, fontSize: 16 }}
-        />
-        <input
-          type="password"
-          placeholder="Пароль"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
           required
           style={{ padding: 8, fontSize: 16 }}
         />
@@ -64,12 +77,14 @@ export default function Signup() {
             cursor: "pointer",
           }}
         >
-          Зарегистрироваться
+          Войти по ссылке из email
         </button>
       </form>
+
       <hr style={{ margin: "20px 0" }} />
+
       <button
-        onClick={handleGoogleSignUp}
+        onClick={handleGoogleSignIn}
         style={{
           width: "100%",
           padding: 10,
@@ -81,7 +96,7 @@ export default function Signup() {
           cursor: "pointer",
         }}
       >
-        Зарегистрироваться через Google
+        Войти через Google
       </button>
     </div>
   );
