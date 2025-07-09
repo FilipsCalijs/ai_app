@@ -3,20 +3,28 @@ import './FAQ.css';
 
 const faqData = [
   {
-    question: 'What is Undress AI?',
-    answer: 'Undress AI is an online tool that allows you to remove clothes from photos and videos using AI technology.',
+    question: 'What is Undressor?',
+    answer: 'Undressor is an AI-powered online tool that digitally removes clothing from images. It uses advanced algorithms to generate high-quality, realistic results.',
   },
   {
-    question: 'Is it safe to use?',
-    answer: 'Yes, your privacy is our priority. All processing happens securely and your data is not shared.',
+    question: 'Is my data safe?',
+    answer: 'Yes. All photo processing is done securely and privately. Your files are not shared — your privacy is our top priority.',
   },
   {
-    question: 'Can I try it for free?',
-    answer: 'Absolutely! We offer a free trial so you can test the features before purchasing.',
+    question: 'Is there a free trial available?',
+    answer: 'Of course! You can test Undressor with a free trial that lets you explore the main features before upgrading to a premium plan.',
   },
   {
-    question: 'Which file formats are supported?',
-    answer: 'We support common image formats like JPG, PNG, and popular video formats such as MP4.',
+    question: 'Which image formats can I upload?',
+    answer: 'Undressor supports popular formats like JPG, JPEG, and PNG, ensuring compatibility with almost any image.',
+  },
+  {
+    question: 'Can I use Undressor on mobile?',
+    answer: 'Yes, Undressor is fully responsive and works on desktops, tablets, and mobile devices — including iOS and Android.',
+  },
+  {
+    question: 'How much does it cost?',
+    answer: 'We offer both free and premium plans. The free version includes basic features, while premium plans unlock full-resolution images, advanced styles, and priority access.',
   },
 ];
 
@@ -30,6 +38,7 @@ const FAQ = () => {
   return (
     <section className="faq-container">
       <h2 className="faq-title">Frequently Asked Questions</h2>
+
       <ul className="faq-list">
         {faqData.map(({ question, answer }, index) => (
           <li key={index} className="faq-item">
@@ -50,7 +59,7 @@ const FAQ = () => {
               aria-labelledby={`faq-question-${index}`}
               style={{ maxHeight: openIndex === index ? '500px' : '0' }}
             >
-              <p className='p-faq'>{answer}</p>
+              <p className="p-faq">{answer}</p>
             </div>
           </li>
         ))}

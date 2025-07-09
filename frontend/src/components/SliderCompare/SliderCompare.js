@@ -42,10 +42,10 @@ const SliderCompare = () => {
         {/* Текстовая часть */}
         <div className="text-content">
           <h2 className="title">
-            How <span>it looks</span> like?
+            How <span>does it</span><br/>  work?
           </h2>
           <p className="description">
-            When you upload an image, online Undress AI program will promptly process it and deliver the highest quality result even with free trial account.
+          Undressor uses AI to analyze the image you upload. The system detects body shape, clothing layers, and background details. Based on this data, it creates a realistic version of the photo without clothes. 
           </p>
           <a class="glow-button" href="https://t.me/TestBeta123bot" target="_blank" rel="noopener noreferrer">Try for free</a>
 

@@ -10,20 +10,20 @@ const SecuritySafe = () => {
         {/* Текст перемещён выше */}
         <div className="security-text">
           <h1>
-            It's
-            <span> completely </span> 
-            safe
+          Your data stays 
+            <span> private  </span> 
+            
           </h1>
           <p className="text-simple">
-            We don’t save any data. <br />
-            This is completely confidential and your actions are not published anywhere.
+            We do not use your images. <br />
+            Your images are saved safely just for you. We don’t use them for anything else and never show them to others.
           </p>
           <a class="glow-button" href="https://t.me/TestBeta123bot" target="_blank" rel="noopener noreferrer">Try for free</a>
 
         </div>
 
         {/* Картинка теперь справа */}
-        <img src="/security.webp" alt="Security Lock" className="security-image" />
+        <img src="/security.png" alt="Security Lock" className="security-image" />
 
       </div>
     </section>

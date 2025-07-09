@@ -110,11 +110,11 @@
   display: flex;
   gap: var(--gap-content);
   align-items: center;
-  width: 1000px;
   justify-content: center;
-  
-
-
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  padding: 0 40px;
 }
 
 .front-hero__text {
@@ -135,6 +135,9 @@
 
 .FrontHero-Text {
   color: var(--color-text-light);
+}
+.FrontHero-Title{
+  font-size: 48px;
 }
 
 .glow-button {
@@ -172,8 +175,8 @@
 
 .front-hero__image,
 .front-hero__video {
-  width: 500px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   border-radius: 16px;
   object-fit: cover;
   box-shadow:
@@ -186,28 +189,32 @@
   --color-text-light: #fff; /* исправил на валидный цвет */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .front-hero__content {
-    flex-direction: column;
+
     align-items: center;
     gap: 30px;
-    padding: 0 20px;
-    max-width: 400px;
+
+    width: 100%;
+    max-width: 100%; /* фикс: не ограничивай 400px */
+  }
+  .front-hero__logo img{
+    display: none;
   }
 
   .front-hero__text {
-    max-width: 100%;
     text-align: center;
-    font-size: 1.1rem; /* чуть увеличил читаемость */
+
+    width: 100%;
   }
 
   .front-hero__text h2 {
-    font-size: 2rem; /* уменьшил заголовок для мобилки */
+    font-size: 3rem;
   }
 
   .glow-button {
-    width: 100%; /* кнопка растягивается по ширине */
-    max-width: 320px;
+    width: 100%;
+    max-width: 220px;
     padding: 14px 0;
     font-size: 1.2rem;
   }
@@ -225,9 +232,15 @@
     width: 90vw;
     max-width: 350px;
     height: auto;
-    box-shadow:
-      0 0 15px rgba(255, 136, 0, 0.7),
-      0 40px 12px rgba(0, 0, 0, 0.15);
+  }
+  @media (max-width: 768px) {
+    .front-hero__content {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 0 10px;
+      width: 100%;
+      max-width: 100%; /* фикс: не ограничивай 400px */
+    }
   }
 }
-

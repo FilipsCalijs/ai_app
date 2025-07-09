@@ -49,7 +49,7 @@ const FrontHero = () => {
         <div className="front-hero__media">
           <img
             className="front-hero__image"
-            src="/preview-photo/undress.png"
+            src="/preview-photo/preivew.jpg"
             alt="Undress AI preview"
             width={200}
             height={200}
