@@ -1,10 +1,10 @@
 .compare-wrapper.full {
   position: relative;
-  width: 600px;
+  width: 500px;
   height: 400px;
   overflow: hidden;
   border-radius: 24px;
-  background-color: #161616;
+
   margin: 0 auto;
 }
 

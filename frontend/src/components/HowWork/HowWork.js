@@ -1,34 +1,36 @@
 import React from "react";
 import "./HowWork.css";
+import "../../App.css";
 
 const HowWork = () => {
   return (
     <section className="howwork-container">
       <div className="howwork-image">
-  <video
-    src="/preview-photo/exemple.mp4"
-    alt="Pcreview"
-    autoPlay
-    loop
-    muted
-    playsInline
-    controls={false} // если не хочешь показывать контролы
-    style={{ width: '100%', height: 'auto' }} // адаптивный размер
+  <img
+    src="/preview-photo/bg.png"
+    alt="Background shape"
+    className="howwork-image-bg"
+  />
+  <img
+    src="/preview-photo/preview2.jpg"
+    alt="Preview"
+    className="howwork-image-main"
   />
 </div>
+
+
       <div className="howwork-content">
-        <h2>How does SmartAI Tool work?</h2>
-        <p>
-          Our AI-powered tool is trained on thousands of data samples. It
-          generates results as accurately as possible, giving users intelligent
-          and fast outputs.
+        <h2>How does Undressor work</h2>
+        <p className="">
+        Undressor is powered by big LLM modal that has learned from thousands of images. It understands shapes, clothing, and body features to generate accurate and natural-looking results in seconds.
         </p>
         <ol>
-          <li><strong>Sign up safely and anonymously</strong></li>
-          <li><strong>Choose a generation mode</strong></li>
-          <li><strong>Upload your image or file to get results</strong></li>
+          <li><strong>You don’t need an account to use it</strong></li>
+          <li><strong>Just pick a mode that fits your needs</strong></li>
+          <li><strong>Upload your image and get the result right away</strong></li>
         </ol>
-        <button className="glow-button">Try for free</button>
+     
+
       </div>
     </section>
   );
