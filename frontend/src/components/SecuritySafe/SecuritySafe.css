@@ -1,9 +1,10 @@
 .security-safe {
   background-color: var(--color-bg-main);
-  padding: 2rem 0 4rem 0;
+
   color: white;
   gap: 20px;
   display: flex;
+  padding: 10px;
   justify-content: center;
   font-family: var(--font-family-main);
 }
@@ -14,11 +15,11 @@
   align-items: center;
   max-width: var(--width-container-max, 1200px);
   gap: 60px;
-  flex-wrap: wrap;
+
 }
 
 .security-image {
-  width: 500px;
+  width: 400px;
   max-width: 100%;
   border-radius: var(--border-radius-big);
 
@@ -70,7 +71,13 @@
   outline: none;
 }
 @media (max-width: 768px) {
+  .security-image{
+    gap: 0;
+    width: 350px;
+
+  }
   .security-content {
+    gap: 0;
     flex-direction: column;
     text-align: center;
     align-items: center;

@@ -65,44 +65,10 @@
   --height-media: 210px;
 }
 
-body{
+body {
   background-color: #0d071e;
   margin: 0;
 }
-.front-hero {
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--padding-vertical) 0;
-  font-family: var(--font-family-main);
-  color: var(--color-text-main);
-  background-color: var(--color-bg-main);
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-main);
-  align-items: center;
-}
-
-
-.front-hero__logo {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* расстояние между картинкой и текстом */
-  font-size: var(--font-size-logo);
-  font-weight: var(--font-weight-logo);
-  color: var(--color-text-light);
-  user-select: none;
-  cursor: default;
-}
-
-.front-hero__logo img {
-  display: block;
-  width: var(--width-logo-img);
-  height: var(--height-logo-img);
-  border-radius: var(--border-radius-small);
-  object-fit: contain;
-}
-
-
 
 .header-button {
   background: var(--color-primary);
@@ -146,39 +112,6 @@ body{
   background-color: var(--color-support-hover);
   box-shadow: 0 0 20px var(--color-support-shadow);
 }
-
-
-
-.FrontHero-Text {
-  color: var(--color-text-light);
-}
-
-
-
-.glow-button {
-  background: linear-gradient(45deg, var(--color-glow), var(--color-glow));
-  border: none;
-  border-radius: var(--border-radius-big);
-  color: var(--color-text-light);
-  font-weight: var(--font-weight-glow-button);
-  font-size: var(--font-size-glow-button);
-  padding: 14px 48px;
-  cursor: pointer;
-  box-shadow: 0 0 10px var(--color-glow), 0 0 25px var(--color-glow);
-  transition: box-shadow 0.3s ease-in-out;
-  user-select: none;
-}
-
-.glow-button:hover,
-.glow-button:focus {
-  box-shadow:
-    0 0 15px var(--color-glow-hover1),
-    0 0 40px var(--color-glow-hover2),
-    0 0 50px var(--color-glow-hover2),
-    0 0 70px var(--color-glow-hover1);
-  outline: none;
-}
-
 
 .tab {
   border-radius: var(--border-radius-big);
@@ -227,12 +160,11 @@ body{
     0 0 50px var(--primary-violet);
   outline: none;
 }
+
 span {
   color: var(--color-glow);
 }
 
 @media (max-width: 700px) {
-  
-
-
+  /* адаптив для мобилки — пустой, можешь добавить сюда, что нужно */
 }
