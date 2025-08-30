@@ -1,45 +1,36 @@
-import React from 'react';
-import './Footer.css';
+// src/components/Footer/Footer.jsx
+import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
-  const year = new Date().getFullYear();
-
+export default function Footer() {
   return (
     <footer className="footer">
-      © {year} All rights reserved
+      <div className="footer-content">
+        <p>© 2025 Undressor. All rights reserved.</p>
+        <div className="footer-languages">
+          <span
+            className="footer-lang"
+            onClick={() => (window.location.href = "/")}
+            style={{ cursor: "pointer", marginRight: "8px" }}
+          >
+            English
+          </span>
+          <span
+            className="footer-lang"
+            onClick={() => (window.location.href = "/ru")}
+            style={{ cursor: "pointer", marginRight: "8px" }}
+          >
+            Русский
+          </span>
+          <span
+            className="footer-lang"
+            onClick={() => (window.location.href = "/de")}
+            style={{ cursor: "pointer" }}
+          >
+            Deutsch
+          </span>
+        </div>
+      </div>
     </footer>
   );
-};
-
-export default Footer;
-
-
-// import React, { useEffect } from "react";
-// import { useAuth } from "../AuthContext/AuthContext";
-// import "./Footer.css";
-
-// export default function Footer() {
-//   const { userData, loading } = useAuth();
-
-//   useEffect(() => {
-//     if (!loading) {
-//       console.log("✅ User Data в Footer:", userData);
-//     }
-//   }, [loading, userData]);
-
-//   return (
-//     <footer className="footer">
-//       {loading ? (
-//         <p>🔄 Загрузка данных...</p>
-//       ) : !userData ? (
-//         <p>⚠️ Пользователь не авторизован</p>
-//       ) : (
-//         <>
-//           <p>📧 Email: {userData.email}</p>
-//           <p>💰 Коины: {userData.coins ?? 0}</p>
-//           <p>📦 Подписка: {userData.subscription ?? "Нет"}</p>
-//         </>
-//       )}
-//     </footer>
-//   );
-// }
+}

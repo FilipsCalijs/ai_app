@@ -179,9 +179,7 @@
   height: 450px;
   border-radius: 16px;
   object-fit: cover;
-  box-shadow:
-    0 0 20px rgba(255, 255, 255, 0.25),
-    0 60px 18px rgba(0, 0, 0, 0.2);
+
   transition: box-shadow 0.3s ease-in-out;
 }
 
