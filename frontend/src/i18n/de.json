@@ -1,0 +1,79 @@
+{
+  "title": "Das leistungsstärkste <span class='highlight-ai'>AI</span>-Tool zum Entfernen von Kleidung auf Fotos",
+  "description": "Undressor nutzt modernste AI-Technologien...",
+  "telegram": "Telegram abonnieren",
+  "tryFree": "Kostenlos testen",
+  "meta": {
+    "title": "Undressor – KI-gesteuertes Entfernen von Kleidung auf Fotos",
+    "description": "Entfernen Sie Kleidung auf Fotos mit künstlicher Intelligenz. Schnell, sicher und bequem."
+  },
+  "howWork": {
+    "title": "Wie funktioniert Undressor",
+    "description": "Undressor basiert auf einem großen LLM-Modell, das mit Tausenden von Bildern trainiert wurde. Es erkennt Formen, Kleidung und Körpermerkmale, um präzise und natürliche Ergebnisse in Sekundenschnelle zu liefern.",
+    "step1": "Sie benötigen kein Konto, um es zu verwenden",
+    "step2": "Wählen Sie einfach den Modus, der Ihren Anforderungen entspricht",
+    "step3": "Laden Sie ein Bild hoch und erhalten Sie sofort das Ergebnis",
+    "bgAlt": "Hintergrundform",
+    "previewAlt": "Vorschau"
+  },
+  "sliderCompare": {
+    "title": "Wie funktioniert es?",
+    "description": "Undressor nutzt AI, um das hochgeladene Bild zu analysieren. Das System erkennt Körperform, Kleidungsschichten und Hintergrund. Basierend auf diesen Daten wird eine realistische Version des Fotos ohne Kleidung erstellt.",
+    "tryFree": "Kostenlos testen"
+  },
+  "securitySafe": {
+    "titlePart1": "Daten ",
+    "titlePart2": "sind geschützt",
+    "description": "Wir verwenden Ihre Bilder nicht. Ihre Bilder werden sicher nur für Sie gespeichert. Wir verwenden sie niemals für andere Zwecke und zeigen sie niemandem.",
+    "tryFree": "Kostenlos testen",
+    "imageAlt": "Sicherheitsschloss"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": {
+      "question": "Was ist Undressor?",
+      "answer": "Undressor ist ein Online-Tool auf AI-Basis, das Kleidung auf Bildern digital entfernt. Es verwendet fortschrittliche Algorithmen, um qualitativ hochwertige und realistische Ergebnisse zu erzielen."
+    },
+    "q2": {
+      "question": "Sind meine Daten sicher?",
+      "answer": "Ja. Die gesamte Fotoverarbeitung erfolgt sicher und vertraulich. Ihre Dateien werden nicht an Dritte weitergegeben – Ihre Privatsphäre hat oberste Priorität."
+    },
+    "q3": {
+      "question": "Gibt es eine kostenlose Testphase?",
+      "answer": "Natürlich! Sie können Undressor mit einer kostenlosen Testphase ausprobieren, um die Hauptfunktionen zu testen, bevor Sie auf den Premium-Plan wechseln."
+    },
+    "q4": {
+      "question": "Welche Bildformate kann ich hochladen?",
+      "answer": "Undressor unterstützt gängige Formate wie JPG, JPEG und PNG und gewährleistet Kompatibilität mit fast allen Bildern."
+    },
+    "q5": {
+      "question": "Kann ich Undressor auf mobilen Geräten verwenden?",
+      "answer": "Ja, Undressor ist vollständig responsiv und funktioniert auf Desktop-, Tablet- und Mobilgeräten – einschließlich iOS und Android."
+    },
+    "q6": {
+      "question": "Wie viel kostet es?",
+      "answer": "Wir bieten sowohl kostenlose als auch Premium-Pläne an. Die kostenlose Version enthält grundlegende Funktionen, während Premium-Pläne Zugriff auf hochauflösende Bilder, erweiterte Stile und Prioritätsservice bieten."
+    }
+  },
+  "review": {
+    "users": {
+      "title": "5000+ Nutzer",
+      "subtitle": "besuchen die Website täglich"
+    },
+    "userFriendly": {
+      "title": "Benutzerfreundlich",
+      "subtitle": "und intuitiv bedienbar"
+    },
+    "topQuality": {
+      "title": "Hohe Qualität",
+      "subtitle": "Beste Qualität auf dem Markt"
+    },
+    "secure": {
+      "title": "Sicherheit",
+      "subtitle": "Ihre Daten sind sicher"
+    }
+  },
+  "footer": {
+    "allRights": "Alle Rechte vorbehalten"
+  }
+}

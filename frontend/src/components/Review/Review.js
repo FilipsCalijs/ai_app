@@ -1,14 +1,33 @@
 import React, { useEffect, useRef } from "react";
 import "./Review.css";
-
-const reviews = [
-  { title: "5,000+ users", subtitle: "every day visiting our site", emoji: "🧑‍🤝‍🧑" },
-  { title: "User-friendly", subtitle: "and intuitive interface", emoji: "📱" },
-  { title: "Top Quality", subtitle: "Best quality on the market", emoji: "✔️" },
-  { title: "Secure", subtitle: "Your data is safe with us", emoji: "🔒" }
-];
+import { useTranslation } from "react-i18next";
 
 const Review = () => {
+  const { t } = useTranslation();
+
+  const reviews = [
+    {
+      title: t("review.users.title"),
+      subtitle: t("review.users.subtitle"),
+      emoji: "🧑‍🤝‍🧑"
+    },
+    {
+      title: t("review.userFriendly.title"),
+      subtitle: t("review.userFriendly.subtitle"),
+      emoji: "📱"
+    },
+    {
+      title: t("review.topQuality.title"),
+      subtitle: t("review.topQuality.subtitle"),
+      emoji: "✔️"
+    },
+    {
+      title: t("review.secure.title"),
+      subtitle: t("review.secure.subtitle"),
+      emoji: "🔒"
+    }
+  ];
+
   const containerRef = useRef(null);
   const scrollPositionRef = useRef(0);
   const requestRef = useRef();
@@ -21,7 +40,7 @@ const Review = () => {
     if (!isMobile()) return;
 
     const maxScroll = container.scrollWidth - container.clientWidth;
-    const scrollSpeed = 0.5; // пикселей за кадр, регулируй по вкусу
+    const scrollSpeed = 0.5;
 
     const step = () => {
       scrollPositionRef.current += scrollSpeed;
@@ -34,7 +53,6 @@ const Review = () => {
 
     requestRef.current = requestAnimationFrame(step);
 
-    // Остановить анимацию при выходе из мобилки
     const handleResize = () => {
       if (!isMobile()) cancelAnimationFrame(requestRef.current);
     };

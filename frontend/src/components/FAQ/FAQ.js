@@ -1,34 +1,36 @@
 import React, { useState } from 'react';
 import './FAQ.css';
+import { useTranslation } from 'react-i18next';
 
-const faqData = [
+const faqData = (t) => [
   {
-    question: 'What is Undressor?',
-    answer: 'Undressor is an AI-powered online tool that digitally removes clothing from images. It uses advanced algorithms to generate high-quality, realistic results.',
+    question: t('faq.q1.question'),
+    answer: t('faq.q1.answer'),
   },
   {
-    question: 'Is my data safe?',
-    answer: 'Yes. All photo processing is done securely and privately. Your files are not shared — your privacy is our top priority.',
+    question: t('faq.q2.question'),
+    answer: t('faq.q2.answer'),
   },
   {
-    question: 'Is there a free trial available?',
-    answer: 'Of course! You can test Undressor with a free trial that lets you explore the main features before upgrading to a premium plan.',
+    question: t('faq.q3.question'),
+    answer: t('faq.q3.answer'),
   },
   {
-    question: 'Which image formats can I upload?',
-    answer: 'Undressor supports popular formats like JPG, JPEG, and PNG, ensuring compatibility with almost any image.',
+    question: t('faq.q4.question'),
+    answer: t('faq.q4.answer'),
   },
   {
-    question: 'Can I use Undressor on mobile?',
-    answer: 'Yes, Undressor is fully responsive and works on desktops, tablets, and mobile devices — including iOS and Android.',
+    question: t('faq.q5.question'),
+    answer: t('faq.q5.answer'),
   },
   {
-    question: 'How much does it cost?',
-    answer: 'We offer both free and premium plans. The free version includes basic features, while premium plans unlock full-resolution images, advanced styles, and priority access.',
+    question: t('faq.q6.question'),
+    answer: t('faq.q6.answer'),
   },
 ];
 
 const FAQ = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleIndex = (index) => {
@@ -37,10 +39,10 @@ const FAQ = () => {
 
   return (
     <section className="faq-container">
-      <h2 className="faq-title">Frequently Asked Questions</h2>
+      <h2 className="faq-title">{t('faq.title')}</h2>
 
       <ul className="faq-list">
-        {faqData.map(({ question, answer }, index) => (
+        {faqData(t).map(({ question, answer }, index) => (
           <li key={index} className="faq-item">
             <button
               className={`faq-question ${openIndex === index ? 'open' : ''}`}

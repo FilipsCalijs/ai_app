@@ -1,7 +1,9 @@
+// src/components/SliderCompare/SliderCompare.js
 import React, { useEffect, useRef } from 'react';
 import ImageCompareAuto from '../ImageCompareAuto/ImageCompareAuto';
 import '../ImageCompareAuto/ImageCompareAuto.css';
 import './SliderCompare.css';
+import { useTranslation } from 'react-i18next';
 
 const slides = [
   { id: 'slide-1', before: '/slide/before.png', after: '/slide/after.png' },
@@ -13,6 +15,7 @@ const SliderCompare = () => {
   const sliderRef = useRef(null);
   const slideCount = slides.length;
   const intervalTime = 5000; // 5 секунд
+  const { t } = useTranslation();
 
   useEffect(() => {
     const slider = sliderRef.current;
@@ -36,19 +39,24 @@ const SliderCompare = () => {
   }, [slideCount]);
 
   return (
-    <div style={{backgroundColor:''}}>
     <section className="container">
       <div className="content-wrapper">
         {/* Текстовая часть */}
         <div className="text-content">
           <h2 className="title">
-            How <span>does it</span><br/>  work?
+            {t('sliderCompare.title')}
           </h2>
           <p className="description">
-          Undressor uses AI to analyze the image you upload. The system detects body shape, clothing layers, and background details. Based on this data, it creates a realistic version of the photo without clothes. 
+            {t('sliderCompare.description')}
           </p>
-          <a class="glow-button" href="https://t.me/TestBeta123bot" target="_blank" rel="noopener noreferrer">Try for free</a>
-
+          <a
+            className="glow-button"
+            href="https://t.me/TestBeta123bot"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t('sliderCompare.tryFree')}
+          </a>
         </div>
 
         {/* Слайдер */}
@@ -81,7 +89,6 @@ const SliderCompare = () => {
         </div>
       </div>
     </section>
-    </div>
   );
 };
 

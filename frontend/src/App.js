@@ -1,61 +1,91 @@
-import React, { useEffect, useState } from "react";
+// src/App.js
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import TopBanner from "./components/TopBanner/TopBanner";
 import FrontHero from "./components/FrontHero/FrontHero";
 import Review from "./components/Review/Review";
-import HowWork from "./components/HowWork/HowWork";
 import SliderCompare from "./components/SliderCompare/SliderCompare";
+import HowWork from "./components/HowWork/HowWork";
+import SecuritySafe from "./components/SecuritySafe/SecuritySafe";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
 import ModalWindow from "./components/ModalWindow/ModalWindow";
 import RulesModal from "./components/RulesModal/RulesModal";
-import PrivateRoute from "./components/PrivateRoute";
-import Signup from "./pages/Signup";
-import CreateImage from "./components/CreateImage/CreateImage";
-import SecuritySafe from "./components/SecuritySafe/SecuritySafe";
+import NotFound from "./components/NotFound/NotFound";
 
+// Список поддерживаемых языков
+const supportedLanguages = ["ru", "de", "es", "hi", "ja", "lv"]; // en — по умолчанию
+
+// Универсальная обертка для языковой версии
+function LanguageWrapper({ lang }) {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+  }, [lang, i18n]);
+
+  return (
+    <>
+      <TopBanner />
+      <FrontHero />
+      <Review />
+      <SliderCompare />
+      <HowWork />
+      <SecuritySafe />
+      <FAQ />
+      <Footer />
+    </>
+  );
+}
+
+// Основной контент приложения
 function AppContent() {
   const location = useLocation();
-  const [showModal, setShowModal] = useState(false);          // Modal on /create-image
-  const [rulesAccepted, setRulesAccepted] = useState(false);  // Rules modal on first visit
+  const { i18n } = useTranslation();
+  const [showModal, setShowModal] = useState(false);
+  const [rulesAccepted, setRulesAccepted] = useState(false);
 
-  // Check if rules were accepted
+  // Синхронизация языка с URL
+  useEffect(() => {
+    const pathLang = location.pathname.split("/")[1];
+    if (supportedLanguages.includes(pathLang)) {
+      if (i18n.language !== pathLang) i18n.changeLanguage(pathLang);
+    } else if (i18n.language !== "en") {
+      i18n.changeLanguage("en");
+    }
+  }, [location.pathname, i18n]);
+
+  // Проверка принятия правил
   useEffect(() => {
     const accepted = localStorage.getItem("rulesAccepted");
-    if (accepted === "true") {
-      setRulesAccepted(true);
-    }
+    if (accepted === "true") setRulesAccepted(true);
   }, []);
 
-  // Handle "Accept" in RulesModal
   const handleAcceptRules = () => {
     localStorage.setItem("rulesAccepted", "true");
     setRulesAccepted(true);
   };
 
-  // Show 5-sec modal on /create-image
+  // Модальное окно на /create-image
   useEffect(() => {
     let timer;
-
     if (location.pathname === "/create-image") {
-      timer = setTimeout(() => {
-        setShowModal(true);
-      }, 5000);
+      timer = setTimeout(() => setShowModal(true), 5000);
     } else {
       setShowModal(false);
     }
-
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
     <>
-      {/* Main app blur when RulesModal is shown */}
       <div className={rulesAccepted ? "" : "app-blur"}>
         {showModal && <ModalWindow onClose={() => setShowModal(false)} />}
 
         <Routes>
+          {/* Английская версия по умолчанию */}
           <Route
             path="/"
             element={
@@ -65,33 +95,29 @@ function AppContent() {
                 <Review />
                 <SliderCompare />
                 <HowWork />
-                <SecuritySafe/>
+                <SecuritySafe />
                 <FAQ />
-              
-                <Footer/>
-                
-               
+                <Footer />
               </>
             }
           />
-          <Route
-            path="/create-image"
-            element={
-              <PrivateRoute>
-                <CreateImage />
-              </PrivateRoute>
-            }
-          />
-          <Route path="/signup" element={<Signup />} />
+
+          {/* Языковые версии */}
+          {supportedLanguages.map((lang) => (
+            <Route key={lang} path={`/${lang}/*`} element={<LanguageWrapper lang={lang} />} />
+          ))}
+
+          {/* 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
 
-      {/* Rules modal overlays everything if not accepted */}
       {!rulesAccepted && <RulesModal onAccept={handleAcceptRules} />}
     </>
   );
 }
 
+// Главный App с Router
 export default function App() {
   return (
     <Router>

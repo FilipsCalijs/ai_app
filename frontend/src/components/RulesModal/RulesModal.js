@@ -5,13 +5,19 @@ const RulesModal = ({ onAccept }) => {
   return (
     <div className="rules-modal__overlay">
       <div className="rules-modal__content">
-        <h2>Rules</h2>
+        <h2>Rules & Terms of Use</h2>
         <ol>
           <li>You must be 18+ to use this website.</li>
-          <li>You can't use others photos without their permission and persons under 18 years of age.</li>
-          <li>You are solely responsible for the images you generate.</li>
+          <li>You cannot use or upload images of people under 18 years old.</li>
+          <li>You cannot use other people’s photos without their permission.</li>
+          <li>All content you generate must comply with local and international laws.</li>
+          <li>The website and its owners are not liable for any misuse of generated images.</li>
+          <li>You must not generate or distribute illegal, obscene, or offensive content.</li>
+         
         </ol>
-        <p>By clicking on Accept you automatically agree to the above terms</p>
+        <p>
+          By clicking on <strong>Accept</strong>, you automatically agree to all of the above terms and conditions.
+        </p>
         <button className="rules-modal__button" onClick={onAccept}>
           Accept
         </button>

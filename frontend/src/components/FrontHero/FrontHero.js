@@ -1,23 +1,34 @@
 import React from "react";
 import "./FrontHero.css";
-import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
+import metaData from "../../metaData/metaData";
 
 const FrontHeroHeader = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="front-hero__header">
       <div className="front-hero__logo">
         <img
-          src="logo-removebg-preview.png"
+          src="/preview-photo/logo-removebg-preview.png"
           alt="Logo"
           width={50}
           height={50}
         />
-        <div><span style={{ color: '#FF8800' }}>Un</span>dressor</div>
+        <div>
+          <span style={{ color: "#FF8800" }}>Un</span>dressor
+        </div>
       </div>
 
       <div className="front-hero__header-buttons">
-        <a className="header-button telegram" href="https://t.me/TestBeta123bot" target="_blank" rel="noopener noreferrer">
-          Telegram
+        <a
+          className="header-button telegram"
+          href="https://t.me/TestBeta123bot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t("telegram")}
         </a>
       </div>
     </div>
@@ -25,36 +36,54 @@ const FrontHeroHeader = () => {
 };
 
 const FrontHero = () => {
+  const { i18n, t } = useTranslation();
+  const lang = i18n.language || "en";
+
   return (
     <section className="front-hero">
-      <FrontHeroHeader />
+      <Helmet>
+        <html lang={lang} />
+        <title>{metaData[lang].title}</title>
+        <meta name="description" content={metaData[lang].description} />
 
+        {/* hreflang для мультиязычного SEO */}
+        <link rel="alternate" href="https://undressor.com/ru/" hreflang="ru" />
+        <link rel="alternate" href="https://undressor.com/en/" hreflang="en" />
+        <link rel="alternate" href="https://undressor.com/lv/" hreflang="lv" />
+        <link rel="alternate" href="https://undressor.com/hu/" hreflang="hu" />
+        <link rel="alternate" href="https://undressor.com/" hreflang="x-default" />
+
+      </Helmet>
+
+      <FrontHeroHeader />
+      
       <div className="front-hero__content">
         <div className="front-hero__text">
-          <h2 className="FrontHero-Title">
-            Most Powerful <span style={{ color: '#FF8800' }}> AI Clothes </span>Remover Tool
-          </h2>
-          <p className="FrontHero-Text">
-            Undressor uses the most advanced AI technologies to make your photos look as realistic as possible. Upload your image, customize the settings, and create your perfect look!
-          </p>
+        <h2
+          className="FrontHero-Title"
+          dangerouslySetInnerHTML={{ __html: t("title") }}
+        />
+        <p className="FrontHero-Text">{t("description")}</p>
+
+
+
           <a
             className="glow-button"
             href="https://t.me/TestBeta123bot"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Try for free
+            {t("tryFree")}
           </a>
         </div>
         <div className="front-hero__media">
           <img
             className="front-hero__image"
             src="/preview-photo/preivew.jpg"
-            alt="Undress AI preview"
+            alt={t("title")}
             width={200}
             height={200}
           />
-         
         </div>
       </div>
     </section>

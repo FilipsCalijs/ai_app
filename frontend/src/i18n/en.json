@@ -1,0 +1,65 @@
+{
+  "title": "Most Powerful AI Clothes Remover Tool",
+  "description": "Undressor uses the most advanced AI technologies to make your photos look as realistic as possible. Upload your image, customize the settings, and create your perfect look!.",
+  "telegram": "Telegram",
+  "tryFree": "Try for free",
+  "meta": {
+    "title": "Undressor – AI Clothes Remover",
+    "description": "Remove clothes from photos with AI. Fast, safe, and easy."
+  },
+  "howWork": {
+    "title": "How does Undressor work",
+    "description": "Undressor is powered by a big LLM model that has learned from thousands of images. It understands shapes, clothing, and body features to generate accurate and natural-looking results in seconds.",
+    "step1": "You don’t need an account to use it",
+    "step2": "Just pick a mode that fits your needs",
+    "step3": "Upload your image and get the result right away",
+    "bgAlt": "Background shape",
+    "previewAlt": "Preview"
+  },
+
+    "sliderCompare": {
+      "title": "How does it work?",
+      "description": "Undressor uses AI to analyze the image you upload. The system detects body shape, clothing layers, and background details. Based on this data, it creates a realistic version of the photo without clothes.",
+      "tryFree": "Try for free"
+    
+  },
+  
+    "securitySafe": {
+      "titlePart1": "Your data stays",
+      "titlePart2": "private",
+      "description": "We do not use your images. Your images are saved safely just for you. We don’t use them for anything else and never show them to others.",
+      "tryFree": "Try for free",
+      "imageAlt": "Security Lock"
+    
+  },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What is Undressor?",
+        "answer": "Undressor is an AI-powered online tool that digitally removes clothing from images. It uses advanced algorithms to generate high-quality, realistic results."
+      },
+      "q2": {
+        "question": "Is my data safe?",
+        "answer": "Yes. All photo processing is done securely and privately. Your files are not shared — your privacy is our top priority."
+      },
+      "q3": {
+        "question": "Is there a free trial available?",
+        "answer": "Of course! You can test Undressor with a free trial that lets you explore the main features before upgrading to a premium plan."
+      },
+      "q4": {
+        "question": "Which image formats can I upload?",
+        "answer": "Undressor supports popular formats like JPG, JPEG, and PNG, ensuring compatibility with almost any image."
+      },
+      "q5": {
+        "question": "Can I use Undressor on mobile?",
+        "answer": "Yes, Undressor is fully responsive and works on desktops, tablets, and mobile devices — including iOS and Android."
+      },
+      "q6": {
+        "question": "How much does it cost?",
+        "answer": "We offer both free and premium plans. The free version includes basic features, while premium plans unlock full-resolution images, advanced styles, and priority access."
+      }
+    }
+    
+  
+  
+}

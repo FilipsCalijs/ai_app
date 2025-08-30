@@ -1,8 +1,11 @@
 import React from "react";
 import "./SecuritySafe.css";
 import "../../App.css";
+import { useTranslation } from "react-i18next";
 
 const SecuritySafe = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="security-safe">
       <div className="security-content">
@@ -10,20 +13,27 @@ const SecuritySafe = () => {
         {/* Текст перемещён выше */}
         <div className="security-text">
           <h1>
-          Your data stays 
-            <span> private  </span> 
-            
+            {t("securitySafe.titlePart1")} <span>{t("securitySafe.titlePart2")}</span>
           </h1>
           <p className="text-simple">
-            We do not use your images. <br />
-            Your images are saved safely just for you. We don’t use them for anything else and never show them to others.
+            {t("securitySafe.description")}
           </p>
-          <a class="glow-button" href="https://t.me/TestBeta123bot" target="_blank" rel="noopener noreferrer">Try for free</a>
-
+          <a
+            className="glow-button"
+            href="https://t.me/TestBeta123bot"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("securitySafe.tryFree")}
+          </a>
         </div>
 
         {/* Картинка теперь справа */}
-        <img src="/security.png" alt="Security Lock" className="security-image" />
+        <img
+          src="/security.png"
+          alt={t("securitySafe.imageAlt")}
+          className="security-image"
+        />
 
       </div>
     </section>
