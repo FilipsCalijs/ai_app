@@ -1,12 +1,16 @@
 // src/components/Footer/Footer.jsx
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Footer.css";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© 2025 Undressor. All rights reserved.</p>
+        <p>{t("footer.allRights")}</p>
+
         <div className="footer-languages">
           <span
             className="footer-lang"
@@ -15,6 +19,7 @@ export default function Footer() {
           >
             English
           </span>
+
           <span
             className="footer-lang"
             onClick={() => (window.location.href = "/ru")}
@@ -22,12 +27,21 @@ export default function Footer() {
           >
             Русский
           </span>
+
           <span
             className="footer-lang"
             onClick={() => (window.location.href = "/de")}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", marginRight: "8px" }}
           >
             Deutsch
+          </span>
+
+          <span
+            className="footer-lang"
+            onClick={() => (window.location.href = "/hi")}
+            style={{ cursor: "pointer" }}
+          >
+            हिंदी
           </span>
         </div>
       </div>

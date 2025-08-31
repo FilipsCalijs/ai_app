@@ -1,34 +1,35 @@
 {
-  "title": "Most Powerful AI Clothes Remover Tool",
-  "description": "Undressor uses the most advanced AI technologies to make your photos look as realistic as possible. Upload your image, customize the settings, and create your perfect look!.",
+  "title": "Most Powerful <span class='highlight-ai'>AI Clothes</span>  Remover Tool",
+  "description": "Undressor uses the most advanced AI technologies to make your photos and video look as realistic as possible. Upload your image, customize the settings, and create your perfect look!",
   "telegram": "Telegram",
+  "whatsapp": "WhatsApp",
   "tryFree": "Try for free",
   "meta": {
-    "title": "Undressor – AI Clothes Remover",
-    "description": "Remove clothes from photos with AI. Fast, safe, and easy."
+    "title": "Undressor –  AI Photo & Video Undressing Tool for Free | AI Undressor App",
+    "description": "Undressor is a powerful AI undressing tool for photos and videos. Upload your image, choose undress mode, and get realistic deepnude results online in seconds."
   },
   "howWork": {
-    "title": "How does Undressor work",
-    "description": "Undressor is powered by a big LLM model that has learned from thousands of images. It understands shapes, clothing, and body features to generate accurate and natural-looking results in seconds.",
-    "step1": "You don’t need an account to use it",
-    "step2": "Just pick a mode that fits your needs",
-    "step3": "Upload your image and get the result right away",
-    "bgAlt": "Background shape",
-    "previewAlt": "Preview"
-  },
+  "title": "How to start<span class='highlight-ai'> using Undressor</span> ",
+  "description": "Undressor is powered by a big LLM model that has learned from thousands of images. It understands shapes, clothing, and body features to generate accurate and natural-looking results in seconds.",
+  "step1": "You don’t need an account to use it ",
+  "step2": "Just pick a mode that fits your needs",
+  "step3": "Upload your image and get the result right away",
+  "bgAlt": "Background shape",
+  "previewAlt": "Preview"
+},
 
     "sliderCompare": {
-      "title": "How does it work?",
-      "description": "Undressor uses AI to analyze the image you upload. The system detects body shape, clothing layers, and background details. Based on this data, it creates a realistic version of the photo without clothes.",
-      "tryFree": "Try for free"
+      "title": "<span class='highlight-ai'>How does</span> it work?",
+      "description": "Undressor uses AI to analyze the image you upload. The system detects body shape, clothing layers, and background details. Based on this data, it creates a realistic version of the photo/video without clothes.",
+      "tryFree": "Claim Free Trial"
     
   },
   
     "securitySafe": {
-      "titlePart1": "Your data stays",
-      "titlePart2": "private",
+  "title": "Secure and <span class='highlight-ai'>Private</span>",
+     
       "description": "We do not use your images. Your images are saved safely just for you. We don’t use them for anything else and never show them to others.",
-      "tryFree": "Try for free",
+      "tryFree": "Launch app",
       "imageAlt": "Security Lock"
     
   },
@@ -36,7 +37,7 @@
       "title": "Frequently Asked Questions",
       "q1": {
         "question": "What is Undressor?",
-        "answer": "Undressor is an AI-powered online tool that digitally removes clothing from images. It uses advanced algorithms to generate high-quality, realistic results."
+        "answer": "Undressor is a leading AI-powered online tool that digitally removes clothing from images. Using the latest technologies and advanced algorithms, it delivers highly realistic, high-quality results. Undressor is one of the best AI clothing removal and reveal applications in the world."
       },
       "q2": {
         "question": "Is my data safe?",
@@ -44,21 +45,46 @@
       },
       "q3": {
         "question": "Is there a free trial available?",
-        "answer": "Of course! You can test Undressor with a free trial that lets you explore the main features before upgrading to a premium plan."
+        "answer": "Sure, You can test Undressor with a free trial that lets you explore the main features before upgrading to a premium plan."
       },
       "q4": {
         "question": "Which image formats can I upload?",
-        "answer": "Undressor supports popular formats like JPG, JPEG, and PNG, ensuring compatibility with almost any image."
+        "answer": "Undressor supports popular image formats including JPG, JPEG, PNG, AVIF, and WebP, as well as compressed images received via Telegram, ensuring compatibility with almost any image."
       },
       "q5": {
-        "question": "Can I use Undressor on mobile?",
-        "answer": "Yes, Undressor is fully responsive and works on desktops, tablets, and mobile devices — including iOS and Android."
+        "question": "What devices are supported?",
+        "answer": "Undressor AI works on all devices – desktop, tablet, and mobile. It supports iOS, Android, and PC. You can use it anytime for AI-powered photo transformations. Undressor is also available as apps on Telegram and WhatsApp for quick access."
       },
       "q6": {
-        "question": "How much does it cost?",
-        "answer": "We offer both free and premium plans. The free version includes basic features, while premium plans unlock full-resolution images, advanced styles, and priority access."
+        "question": "Where can I view Undressor AI examples?",
+        "answer": "You can view examples on our telegram blog, which provides visuals and demonstrations of how Undressor works with different types of photos."
+      },
+      "q7": {
+        "question": "Can I Use Undressor for Videos?",
+        "answer": "Yes! Undressor now supports image-to-video generation, allowing you to upload short clips or images and transform them into smooth, realistic undressed content. Our AI adapts to movement, lighting, and facial expressions to deliver lifelike, seamless results."
       }
-    }
+    },
+    "review": {
+      "users": {
+        "title": "5,000+ users",
+        "subtitle": "every day visiting our site"
+      },
+      "userFriendly": {
+        "title": "User-friendly",
+        "subtitle": "and intuitive interface"
+      },
+      "topQuality": {
+        "title": "Top Quality",
+        "subtitle": "Best quality on the market"
+      },
+      "secure": {
+        "title": "Secure",
+        "subtitle": "Your data is safe with us"
+      }
+    },
+      "footer": {
+        "allRights": "Все права защищены"
+      }
     
   
   

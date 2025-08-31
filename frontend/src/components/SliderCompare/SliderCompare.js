@@ -6,9 +6,9 @@ import './SliderCompare.css';
 import { useTranslation } from 'react-i18next';
 
 const slides = [
-  { id: 'slide-1', before: '/slide/before.png', after: '/slide/after.png' },
-  { id: 'slide-2', before: '/slide/before2.png', after: '/slide/after2.png' },
-  { id: 'slide-3', before: '/slide/before3.png', after: '/slide/after3.png' },
+  { id: 'slide-1', before: '/slide/before.webp', after: '/slide/after.webp' },
+  { id: 'slide-2', before: '/slide/before2.webp', after: '/slide/after2.webp' },
+  { id: 'slide-3', before: '/slide/before3.webp', after: '/slide/after3.webp' },
 ];
 
 const SliderCompare = () => {
@@ -43,9 +43,12 @@ const SliderCompare = () => {
       <div className="content-wrapper">
         {/* Текстовая часть */}
         <div className="text-content">
-          <h2 className="title">
-            {t('sliderCompare.title')}
-          </h2>
+        <h2
+  className="title"
+  dangerouslySetInnerHTML={{ __html: t('sliderCompare.title') }}
+/>
+
+
           <p className="description">
             {t('sliderCompare.description')}
           </p>

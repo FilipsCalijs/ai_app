@@ -27,6 +27,10 @@ const faqData = (t) => [
     question: t('faq.q6.question'),
     answer: t('faq.q6.answer'),
   },
+  {
+    question: t('faq.q7.question'),
+    answer: t('faq.q.answer'),
+  },
 ];
 
 const FAQ = () => {
