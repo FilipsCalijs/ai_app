@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+// Компоненты
 import TopBanner from "./components/TopBanner/TopBanner";
 import FrontHero from "./components/FrontHero/FrontHero";
 import Review from "./components/Review/Review";
@@ -14,6 +15,9 @@ import Footer from "./components/Footer/Footer";
 import ModalWindow from "./components/ModalWindow/ModalWindow";
 import RulesModal from "./components/RulesModal/RulesModal";
 import NotFound from "./components/NotFound/NotFound";
+
+// Логирование
+import { logVisit, trackClicks, trackScroll, logTime, trackPageView } from "./log";
 
 // Список поддерживаемых языков
 const supportedLanguages = ["ru", "de", "es", "hi", "ja", "lv"]; // en — по умолчанию
@@ -47,7 +51,25 @@ function AppContent() {
   const [showModal, setShowModal] = useState(false);
   const [rulesAccepted, setRulesAccepted] = useState(false);
 
+  // -----------------------
+  // Логирование
+  // -----------------------
+  useEffect(() => {
+    logVisit();                      // визит на сайт
+    trackClicks();                   // клики
+    trackScroll();                   // скролл
+    trackPageView(location.pathname); // текущая страница
+
+    window.addEventListener("beforeunload", logTime); // время на странице
+    return () => {
+      logTime();
+      window.removeEventListener("beforeunload", logTime);
+    };
+  }, [location.pathname]);
+
+  // -----------------------
   // Синхронизация языка с URL
+  // -----------------------
   useEffect(() => {
     const pathLang = location.pathname.split("/")[1];
     if (supportedLanguages.includes(pathLang)) {
@@ -57,7 +79,9 @@ function AppContent() {
     }
   }, [location.pathname, i18n]);
 
+  // -----------------------
   // Проверка принятия правил
+  // -----------------------
   useEffect(() => {
     const accepted = localStorage.getItem("rulesAccepted");
     if (accepted === "true") setRulesAccepted(true);
@@ -68,7 +92,9 @@ function AppContent() {
     setRulesAccepted(true);
   };
 
+  // -----------------------
   // Модальное окно на /create-image
+  // -----------------------
   useEffect(() => {
     let timer;
     if (location.pathname === "/create-image") {

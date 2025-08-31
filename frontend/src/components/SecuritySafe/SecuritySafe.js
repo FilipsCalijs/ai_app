@@ -12,9 +12,10 @@ const SecuritySafe = () => {
 
         {/* Текст перемещён выше */}
         <div className="security-text">
-          <h1>
-            {t("securitySafe.titlePart1")} <span>{t("securitySafe.titlePart2")}</span>
-          </h1>
+        <h1
+          dangerouslySetInnerHTML={{ __html: t("securitySafe.title") }}
+        />
+
           <p className="text-simple">
             {t("securitySafe.description")}
           </p>

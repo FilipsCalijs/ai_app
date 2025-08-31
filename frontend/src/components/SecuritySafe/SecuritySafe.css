@@ -26,6 +26,12 @@
   object-fit: cover;
 }
 
+
+.highlight-ai {
+  color: #ff8800 !important;
+  font-weight: bold;
+}
+
 .security-text h1 {
   font-size: var(--font-size-title);
   font-weight: var(--font-weight-title);

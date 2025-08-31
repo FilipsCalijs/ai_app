@@ -30,6 +30,15 @@ const FrontHeroHeader = () => {
         >
           {t("telegram")}
         </a>
+
+        <a
+          className="header-button whatsapp"
+          href="https://wa.me/37100000000"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+           {t("whatsapp")}
+        </a>
       </div>
     </div>
   );
@@ -46,26 +55,22 @@ const FrontHero = () => {
         <title>{metaData[lang].title}</title>
         <meta name="description" content={metaData[lang].description} />
 
-        {/* hreflang для мультиязычного SEO */}
         <link rel="alternate" href="https://undressor.com/ru/" hreflang="ru" />
         <link rel="alternate" href="https://undressor.com/en/" hreflang="en" />
         <link rel="alternate" href="https://undressor.com/lv/" hreflang="lv" />
         <link rel="alternate" href="https://undressor.com/hu/" hreflang="hu" />
         <link rel="alternate" href="https://undressor.com/" hreflang="x-default" />
-
       </Helmet>
 
       <FrontHeroHeader />
-      
+
       <div className="front-hero__content">
         <div className="front-hero__text">
-        <h2
-          className="FrontHero-Title"
-          dangerouslySetInnerHTML={{ __html: t("title") }}
-        />
-        <p className="FrontHero-Text">{t("description")}</p>
-
-
+          <h2
+            className="FrontHero-Title"
+            dangerouslySetInnerHTML={{ __html: t("title") }}
+          />
+          <p className="FrontHero-Text">{t("description")}</p>
 
           <a
             className="glow-button"
