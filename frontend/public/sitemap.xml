@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English main -->
+  <url>
+    <loc>https://undressor.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undressor.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://undressor.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://undressor.com/de/" />
+    <xhtml:link rel="alternate" hreflang="ph" href="https://undressor.com/ph/" />
+    <xhtml:link rel="alternate" hreflang="br" href="https://undressor.com/br/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://undressor.com/es/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://undressor.com/id/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://undressor.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="kr" href="https://undressor.com/kr/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://undressor.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://undressor.com/lv/" />
+  </url>
+
+  <!-- Russian -->
+  <url>
+    <loc>https://undressor.com/ru/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undressor.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://undressor.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://undressor.com/de/" />
+    <xhtml:link rel="alternate" hreflang="ph" href="https://undressor.com/ph/" />
+    <xhtml:link rel="alternate" hreflang="br" href="https://undressor.com/br/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://undressor.com/es/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://undressor.com/id/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://undressor.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="kr" href="https://undressor.com/kr/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://undressor.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://undressor.com/lv/" />
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://undressor.com/de/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://undressor.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://undressor.com/ru/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://undressor.com/de/" />
+    <xhtml:link rel="alternate" hreflang="ph" href="https://undressor.com/ph/" />
+    <xhtml:link rel="alternate" hreflang="br" href="https://undressor.com/br/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://undressor.com/es/" />
+    <xhtml:link rel="alternate" hreflang="id" href="https://undressor.com/id/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://undressor.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="kr" href="https://undressor.com/kr/" />
+    <xhtml:link rel="alternate" hreflang="hi" href="https://undressor.com/hi/" />
+    <xhtml:link rel="alternate" hreflang="lv" href="https://undressor.com/lv/" />
+  </url>
+
+  <!-- Добавь все остальные локализации по аналогии -->
+
+</urlset>

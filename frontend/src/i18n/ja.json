@@ -1,7 +1,83 @@
 {
-    "telegram": "",
-    "title": "",
-    "description": "",
-    "tryFree": ""
+  "title": "最強の <span class='highlight-ai'>人工知能服消し</span> ツール",
+  "description": "Undressorは最先端の人工知能技術を使い、写真や動画をよりリアルに見せることができます。画像をアップロードして設定をカスタマイズし、理想の結果を手に入れましょう！",
+  "telegram": "テレグラム",
+  "whatsapp": "ワッツアップ",
+  "tryFree": "無料で試す",
+  "meta": {
+    "title": "Undressor – 人工知能で写真・動画の服を消す無料ツール | Undressorアプリ",
+    "description": "Undressorは、人工知能で写真や動画から服を自動的に消す高性能ツールです。画像をアップロードし、モードを選んで、リアルなディープヌード結果を数秒でオンラインで取得できます。"
+  },
+  "howWork": {
+    "title": "<span class='highlight-ai'>Undressor</span> の使い方",
+    "description": "Undressorは数千枚の画像から学習した大型人工知能モデルで動作します。人体の形状や衣服、背景を正確に理解し、自然でリアルな結果を数秒で生成します。",
+    "step1": "アカウント登録は不要です",
+    "step2": "必要に応じてモードを選択",
+    "step3": "画像をアップロードして即結果を取得",
+    "bgAlt": "背景シェイプ",
+    "previewAlt": "プレビュー"
+  },
+  "sliderCompare": {
+    "title": "<span class='highlight-ai'>どのように</span> 動作する？",
+    "description": "Undressorはアップロードした画像を人工知能で解析します。体型、衣服の層、背景を認識し、これらのデータに基づいて服を消したリアルな写真・動画を生成します。",
+    "tryFree": "無料体験を申し込む"
+  },
+  "securitySafe": {
+    "title": "安全で<span class='highlight-ai'>プライベート</span>",
+    "description": "画像はあなた専用に安全に保存されます。他の目的で使用することはなく、第三者に公開されることもありません。",
+    "tryFree": "アプリを起動",
+    "imageAlt": "セキュリティロック"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "q1": {
+      "question": "Undressorとは？",
+      "answer": "Undressorは、人工知能を使って写真や動画からデジタル的に服を消すオンラインツールです。最新の人工知能技術と高度なアルゴリズムにより、自然で高品質な結果を生成します。世界トップクラスの服消しアプリの1つです。"
+    },
+    "q2": {
+      "question": "データは安全ですか？",
+      "answer": "はい。すべての処理は安全かつプライベートに行われます。あなたの画像や動画は共有されず、プライバシーは完全に保護されます。"
+    },
+    "q3": {
+      "question": "無料トライアルはありますか？",
+      "answer": "はい、Undressorでは無料トライアルをご利用いただけます。主要機能を試してからプレミアムプランにアップグレード可能です。"
+    },
+    "q4": {
+      "question": "どの画像形式に対応していますか？",
+      "answer": "UndressorはJPG、JPEG、PNG、AVIF、WebPなどの一般的な形式に対応しています。また、Telegramで受け取った圧縮画像にも対応し、ほとんどの画像を利用可能です。"
+    },
+    "q5": {
+      "question": "どのデバイスで使えますか？",
+      "answer": "Undressorはデスクトップ・タブレット・スマートフォンすべてに対応しています。iOS、Android、PCで利用可能です。さらに、TelegramやWhatsAppのアプリからも簡単にアクセスできます。"
+    },
+    "q6": {
+      "question": "Undressorの例はどこで見られますか？",
+      "answer": "Telegramのブログで実際のサンプルをご覧いただけます。さまざまな写真での動作デモも確認できます。"
+    },
+    "q7": {
+      "question": "動画にも使えますか？",
+      "answer": "はい！Undressorは画像から動画への生成もサポートしています。短いクリップや画像をアップロードすると、動きや表情、光源に合わせて自然でスムーズな結果を生成します。"
+    }
+  },
+  "review": {
+    "users": {
+      "title": "5,000+ユーザー",
+      "subtitle": "毎日サイトを訪問"
+    },
+    "userFriendly": {
+      "title": "使いやすい",
+      "subtitle": "直感的なインターフェース"
+    },
+    "topQuality": {
+      "title": "最高品質",
+      "subtitle": "市場で最高レベルの結果"
+    },
+    "secure": {
+      "title": "安全性",
+      "subtitle": "データは完全に保護されています"
+    }
+  },
+  "footer": {
+    "allRights": "全著作権所有"
   }
-  
+}

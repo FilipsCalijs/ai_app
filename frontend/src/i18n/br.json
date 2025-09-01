@@ -1,0 +1,84 @@
+{
+    "title": "Ferramenta <span class='highlight-ai'>IA</span> Mais Poderosa para Remover Roupas",
+    "description": "O Undressor usa as tecnologias de IA mais avançadas para tornar suas fotos e vídeos o mais realistas possível. Faça upload da sua imagem, personalize as configurações e crie o resultado perfeito!",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "tryFree": "Experimente grátis",
+    "meta": {
+      "title": "Undressor – Ferramenta de IA para Remover Roupas em Fotos e Vídeos Gratuitamente | App Undressor IA",
+      "description": "Undressor é uma poderosa ferramenta online de IA para remover roupas de fotos e vídeos. Faça upload da sua imagem, escolha o modo de remoção e obtenha resultados realistas online em segundos."
+    },
+    "howWork": {
+      "title": "Como começar a usar <span class='highlight-ai'>Undressor</span>",
+      "description": "O Undressor é alimentado por um grande modelo de IA treinado com milhares de imagens. Ele entende formas, roupas e características do corpo para gerar resultados precisos e realistas em segundos.",
+      "step1": "Não é necessário criar uma conta",
+      "step2": "Escolha o modo que melhor se adapta às suas necessidades",
+      "step3": "Faça upload da imagem e obtenha o resultado imediatamente",
+      "bgAlt": "Formato de fundo",
+      "previewAlt": "Pré-visualização"
+    },
+    "sliderCompare": {
+      "title": "Como <span class='highlight-ai'>funciona</span>?",
+      "description": "O Undressor utiliza IA para analisar a imagem enviada. O sistema detecta a forma do corpo, camadas de roupas e detalhes do fundo. Com base nesses dados, ele cria uma versão realista da foto ou vídeo sem roupas.",
+      "tryFree": "Solicitar teste gratuito"
+    },
+    "securitySafe": {
+      "title": "Seguro e <span class='highlight-ai'>Privado</span>",
+      "description": "Não usamos suas imagens. Elas são salvas com segurança apenas para você. Nunca as usamos para outros fins ou mostramos a terceiros.",
+      "tryFree": "Abrir app",
+      "imageAlt": "Cadeado de segurança"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "q1": {
+        "question": "O que é o Undressor?",
+        "answer": "O Undressor é uma ferramenta online líder, alimentada por IA, que remove digitalmente roupas de imagens. Usando tecnologias avançadas e algoritmos sofisticados, oferece resultados altamente realistas e de alta qualidade. É um dos melhores aplicativos de remoção de roupas por IA do mundo."
+      },
+      "q2": {
+        "question": "Meus dados estão seguros?",
+        "answer": "Sim. Todo o processamento das fotos é feito de forma segura e privada. Seus arquivos não são compartilhados — sua privacidade é nossa prioridade."
+      },
+      "q3": {
+        "question": "Existe um teste gratuito?",
+        "answer": "Sim! Você pode testar o Undressor com um teste gratuito que permite explorar os principais recursos antes de fazer upgrade para o plano premium."
+      },
+      "q4": {
+        "question": "Quais formatos de imagem posso enviar?",
+        "answer": "O Undressor suporta formatos populares como JPG, JPEG, PNG, AVIF e WebP, além de imagens compactadas recebidas via Telegram, garantindo compatibilidade com quase qualquer imagem."
+      },
+      "q5": {
+        "question": "Quais dispositivos são suportados?",
+        "answer": "O Undressor IA funciona em todos os dispositivos — desktop, tablet e celular. Suporta iOS, Android e PC. Você pode usar a qualquer momento para transformações de fotos com IA. Também está disponível como app no Telegram e WhatsApp para acesso rápido."
+      },
+      "q6": {
+        "question": "Onde posso ver exemplos do Undressor IA?",
+        "answer": "Você pode ver exemplos em nosso blog do Telegram, que fornece imagens e demonstrações de como o Undressor funciona com diferentes tipos de fotos."
+      },
+      "q7": {
+        "question": "Posso usar o Undressor em vídeos?",
+        "answer": "Sim! O Undressor agora suporta a geração de vídeos a partir de imagens, permitindo que você envie clipes curtos ou imagens e os transforme em conteúdo sem roupas, realista e fluido. Nossa IA se adapta a movimentos, iluminação e expressões faciais para entregar resultados naturais e contínuos."
+      }
+    },
+    "review": {
+      "users": {
+        "title": "Mais de 5.000 usuários",
+        "subtitle": "visitando nosso site diariamente"
+      },
+      "userFriendly": {
+        "title": "Fácil de usar",
+        "subtitle": "com interface intuitiva"
+      },
+      "topQuality": {
+        "title": "Alta Qualidade",
+        "subtitle": "Melhor qualidade do mercado"
+      },
+      "secure": {
+        "title": "Seguro",
+        "subtitle": "Seus dados estão protegidos conosco"
+      }
+    },
+    "footer": {
+      "allRights": "Todos os direitos reservados"
+    }
+  }
+  

@@ -1,0 +1,84 @@
+{
+    "title": "Alat <span class='highlight-ai'>AI</span> Penghapus Pakaian Paling Kuat",
+    "description": "Undressor menggunakan teknologi AI tercanggih untuk membuat foto dan video Anda terlihat se-real mungkin. Unggah gambar, sesuaikan pengaturan, dan buat tampilan sempurna Anda!",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "tryFree": "Coba Gratis",
+    "meta": {
+      "title": "Undressor – Alat AI untuk Menghapus Pakaian dari Foto & Video Gratis | Aplikasi AI Undressor",
+      "description": "Undressor adalah alat AI yang kuat untuk menghapus pakaian dari foto dan video. Unggah gambar, pilih mode penghapusan, dan dapatkan hasil deepnude yang realistis secara online dalam beberapa detik."
+    },
+    "howWork": {
+      "title": "Cara <span class='highlight-ai'>Menggunakan Undressor</span>",
+      "description": "Undressor didukung oleh model AI besar yang telah belajar dari ribuan gambar. Ia memahami bentuk tubuh, pakaian, dan fitur tubuh untuk menghasilkan hasil yang akurat dan alami dalam beberapa detik.",
+      "step1": "Tidak perlu akun untuk menggunakan",
+      "step2": "Pilih mode yang sesuai kebutuhan Anda",
+      "step3": "Unggah gambar dan dapatkan hasilnya segera",
+      "bgAlt": "Bentuk Latar Belakang",
+      "previewAlt": "Pratinjau"
+    },
+    "sliderCompare": {
+      "title": "<span class='highlight-ai'>Bagaimana</span> cara kerjanya?",
+      "description": "Undressor menggunakan AI untuk menganalisis gambar yang Anda unggah. Sistem mendeteksi bentuk tubuh, lapisan pakaian, dan detail latar belakang. Berdasarkan data ini, ia membuat versi foto/video yang realistis tanpa pakaian.",
+      "tryFree": "Coba Gratis Sekarang"
+    },
+    "securitySafe": {
+      "title": "Aman dan <span class='highlight-ai'>Privat</span>",
+      "description": "Gambar Anda disimpan dengan aman hanya untuk Anda. Kami tidak menggunakannya untuk tujuan lain dan tidak pernah menampilkan kepada pihak ketiga.",
+      "tryFree": "Buka Aplikasi",
+      "imageAlt": "Kunci Keamanan"
+    },
+    "faq": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "q1": {
+        "question": "Apa itu Undressor?",
+        "answer": "Undressor adalah alat online bertenaga AI terkemuka yang secara digital menghapus pakaian dari gambar. Menggunakan teknologi terbaru dan algoritma canggih, alat ini menghasilkan hasil yang sangat realistis dan berkualitas tinggi. Undressor adalah salah satu aplikasi AI penghapus pakaian terbaik di dunia."
+      },
+      "q2": {
+        "question": "Apakah data saya aman?",
+        "answer": "Ya. Semua pemrosesan foto dilakukan dengan aman dan privat. File Anda tidak dibagikan — privasi Anda adalah prioritas utama kami."
+      },
+      "q3": {
+        "question": "Apakah tersedia uji coba gratis?",
+        "answer": "Tentu, Anda dapat mencoba Undressor dengan uji coba gratis untuk mengeksplorasi fitur utama sebelum meng-upgrade ke paket premium."
+      },
+      "q4": {
+        "question": "Format gambar apa yang didukung?",
+        "answer": "Undressor mendukung format gambar populer termasuk JPG, JPEG, PNG, AVIF, dan WebP, serta gambar terkompresi dari Telegram, memastikan kompatibilitas dengan hampir semua gambar."
+      },
+      "q5": {
+        "question": "Perangkat apa saja yang didukung?",
+        "answer": "Undressor AI dapat digunakan di semua perangkat – desktop, tablet, dan mobile. Mendukung iOS, Android, dan PC. Anda bisa menggunakannya kapan saja untuk transformasi foto bertenaga AI. Undressor juga tersedia sebagai aplikasi di Telegram dan WhatsApp untuk akses cepat."
+      },
+      "q6": {
+        "question": "Di mana saya bisa melihat contoh Undressor AI?",
+        "answer": "Anda bisa melihat contohnya di blog Telegram kami, yang menampilkan visual dan demonstrasi bagaimana Undressor bekerja dengan berbagai jenis foto."
+      },
+      "q7": {
+        "question": "Apakah Undressor bisa digunakan untuk video?",
+        "answer": "Ya! Undressor sekarang mendukung generasi gambar-ke-video, memungkinkan Anda mengunggah klip pendek atau gambar dan mengubahnya menjadi konten tanpa pakaian yang mulus dan realistis. AI kami menyesuaikan dengan gerakan, pencahayaan, dan ekspresi wajah untuk hasil yang hidup dan seamless."
+      }
+    },
+    "review": {
+      "users": {
+        "title": "5.000+ pengguna",
+        "subtitle": "mengunjungi situs kami setiap hari"
+      },
+      "userFriendly": {
+        "title": "Mudah Digunakan",
+        "subtitle": "dan antarmuka intuitif"
+      },
+      "topQuality": {
+        "title": "Kualitas Terbaik",
+        "subtitle": "Hasil terbaik di pasaran"
+      },
+      "secure": {
+        "title": "Aman",
+        "subtitle": "Data Anda aman bersama kami"
+      }
+    },
+    "footer": {
+      "allRights": "Hak Cipta Dilindungi"
+    }
+  }
+  

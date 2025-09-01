@@ -20,7 +20,7 @@ import NotFound from "./components/NotFound/NotFound";
 import { logVisit, trackClicks, trackScroll, logTime, trackPageView } from "./log";
 
 // Список поддерживаемых языков
-const supportedLanguages = ["ru", "de", "es", "hi", "ja", "lv"]; // en — по умолчанию
+const supportedLanguages = ["ru", "de", "es", "hi", "ja", "id", "lv", "br", "kr", "ph", "lv"]; // en — по умолчанию
 
 // Универсальная обертка для языковой версии
 function LanguageWrapper({ lang }) {

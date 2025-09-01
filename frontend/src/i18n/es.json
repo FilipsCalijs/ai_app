@@ -1,7 +1,83 @@
 {
-    "telegram": "",
-    "title": "",
-    "description": "",
-    "tryFree": ""
+  "title": "La Herramienta Más Potente de <span class='highlight-ai'>IA para Quitar Ropa</span>",
+  "description": "Undressor utiliza las tecnologías de IA más avanzadas para que tus fotos y videos se vean lo más realistas posible. Sube tu imagen, personaliza la configuración ¡y crea tu look perfecto!",
+  "telegram": "Telegram",
+  "whatsapp": "WhatsApp",
+  "tryFree": "Probar gratis",
+  "meta": {
+    "title": "Undressor – Herramienta de IA para Quitar Ropa en Fotos y Videos Gratis | App IA Undressor",
+    "description": "Undressor es una potente herramienta de IA para quitar ropa de fotos y videos. Sube tu imagen, elige el modo de desnudar y obtén resultados deepnude realistas online en segundos."
+  },
+  "howWork": {
+    "title": "Cómo empezar a <span class='highlight-ai'>usar Undressor</span>",
+    "description": "Undressor funciona con un modelo de IA avanzado que ha aprendido de miles de imágenes. Entiende formas, ropa y rasgos corporales para generar resultados precisos y naturales en segundos.",
+    "step1": "No necesitas crear una cuenta para usarlo",
+    "step2": "Elige el modo que mejor se adapte a tus necesidades",
+    "step3": "Sube tu imagen y obtén el resultado al instante",
+    "bgAlt": "Forma de fondo",
+    "previewAlt": "Vista previa"
+  },
+  "sliderCompare": {
+    "title": "<span class='highlight-ai'>¿Cómo</span> funciona?",
+    "description": "Undressor utiliza IA para analizar la imagen que subes. El sistema detecta la forma del cuerpo, las capas de ropa y los detalles del fondo. Con estos datos, genera una versión realista de la foto o video sin ropa.",
+    "tryFree": "Prueba gratis ahora"
+  },
+  "securitySafe": {
+    "title": "Seguro y <span class='highlight-ai'>Privado</span>",
+    "description": "No usamos tus imágenes. Tus archivos se guardan de forma segura solo para ti. No los utilizamos para otros fines ni los mostramos a terceros.",
+    "tryFree": "Abrir app",
+    "imageAlt": "Candado de seguridad"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": {
+      "question": "¿Qué es Undressor?",
+      "answer": "Undressor es una herramienta online líder impulsada por IA que elimina digitalmente la ropa de las imágenes. Usando las tecnologías más recientes y algoritmos avanzados, ofrece resultados altamente realistas y de alta calidad. Es una de las mejores apps de IA para quitar ropa del mundo."
+    },
+    "q2": {
+      "question": "¿Mis datos están seguros?",
+      "answer": "Sí. Todo el procesamiento de fotos se realiza de forma segura y privada. Tus archivos no se comparten: tu privacidad es nuestra máxima prioridad."
+    },
+    "q3": {
+      "question": "¿Hay una prueba gratuita disponible?",
+      "answer": "Por supuesto. Puedes probar Undressor con una prueba gratuita que te permite explorar las funciones principales antes de actualizar a un plan premium."
+    },
+    "q4": {
+      "question": "¿Qué formatos de imagen puedo subir?",
+      "answer": "Undressor admite formatos de imagen populares como JPG, JPEG, PNG, AVIF y WebP, así como imágenes comprimidas recibidas por Telegram, asegurando compatibilidad con casi cualquier archivo."
+    },
+    "q5": {
+      "question": "¿Qué dispositivos son compatibles?",
+      "answer": "Undressor AI funciona en todos los dispositivos: ordenador, tableta y móvil. Es compatible con iOS, Android y PC. También está disponible como app en Telegram y WhatsApp para un acceso rápido."
+    },
+    "q6": {
+      "question": "¿Dónde puedo ver ejemplos de Undressor AI?",
+      "answer": "Puedes ver ejemplos en nuestro blog de Telegram, donde mostramos visuales y demostraciones de cómo funciona Undressor con diferentes tipos de fotos."
+    },
+    "q7": {
+      "question": "¿Puedo usar Undressor para videos?",
+      "answer": "¡Sí! Undressor ahora admite generación de imagen a video, lo que te permite subir clips cortos o imágenes y transformarlos en contenido realista y fluido sin ropa. Nuestra IA se adapta al movimiento, la iluminación y las expresiones faciales para lograr resultados naturales y continuos."
+    }
+  },
+  "review": {
+    "users": {
+      "title": "Más de 5.000 usuarios",
+      "subtitle": "visitan nuestro sitio cada día"
+    },
+    "userFriendly": {
+      "title": "Fácil de usar",
+      "subtitle": "con interfaz intuitiva"
+    },
+    "topQuality": {
+      "title": "Calidad superior",
+      "subtitle": "Mejor calidad del mercado"
+    },
+    "secure": {
+      "title": "Seguro",
+      "subtitle": "Tus datos están protegidos"
+    }
+  },
+  "footer": {
+    "allRights": "Todos los derechos reservados"
   }
-  
+}

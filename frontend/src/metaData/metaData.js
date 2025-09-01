@@ -3,6 +3,10 @@ const metaData = {
     title: "Undressor – AI Photo & Video Undressing Tool for Free | AI Undressor App",
     description: "Undressor is a powerful AI undressing tool for photos and videos. Upload your image, choose undress mode, and get realistic results online in seconds."
   },
+  lv: {
+    "title": "Undressor – MI Foto un Video Apģērbu Noņemšanas Rīks Bezmaksas | Undressor MI Lietotne",
+    "description": "Undressor ir jaudīgs MI rīks apģērbu noņemšanai foto un video. Augšupielādē savu attēlu, izvēlies noņemšanas režīmu un iegūsti reālistiskus rezultātus tiešsaistē dažu sekunžu laikā."
+  },  
   ru: {
     title: "Undressor – AI инструмент для удаления одежды с фото и видео",
     description: "Удаляйте одежду на фото и видео с помощью искусственного интеллекта. Быстро, удобно и безопасно."

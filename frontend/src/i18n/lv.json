@@ -1,0 +1,84 @@
+{
+    "title": "Jaudīgākais <span class='highlight-ai'>MI apģērbu noņemšanas</span> rīks",
+    "description": "Undressor izmanto vismodernākās MI tehnoloģijas, lai jūsu foto un video izskatītos pēc iespējas reālistiskāk. Augšupielādējiet attēlu, pielāgojiet iestatījumus un izveidojiet savu ideālo rezultātu!",
+    "telegram": "Telegram",
+    "whatsapp": "WhatsApp",
+    "tryFree": "Izmēģināt bez maksas",
+    "meta": {
+      "title": "Undressor – MI foto un video apģērbu noņemšanas rīks bez maksas | MI Undressor lietotne",
+      "description": "Undressor ir jaudīgs MI rīks apģērbu noņemšanai foto un video. Augšupielādējiet attēlu, izvēlieties režīmu un saņemiet reālistisku rezultātu tiešsaistē dažu sekunžu laikā."
+    },
+    "howWork": {
+      "title": "Kā sākt<span class='highlight-ai'> lietot Undressor</span>",
+      "description": "Undressor darbojas, izmantojot lielu LLM modeli, kas ir apmācīts tūkstošiem attēlu. Tas saprot formas, apģērbu un ķermeņa īpašības, lai dažās sekundēs radītu precīzus un dabiskus rezultātus.",
+      "step1": "Lai lietotu, nav nepieciešams konts",
+      "step2": "Vienkārši izvēlieties režīmu pēc savām vajadzībām",
+      "step3": "Augšupielādējiet attēlu un uzreiz saņemiet rezultātu",
+      "bgAlt": "Fona forma",
+      "previewAlt": "Priekšskatījums"
+    },
+    "sliderCompare": {
+      "title": "<span class='highlight-ai'>Kā</span> tas darbojas?",
+      "description": "Undressor izmanto MI, lai analizētu jūsu augšupielādēto attēlu. Sistēma atpazīst ķermeņa formu, apģērba slāņus un fona detaļas. Pamatojoties uz šiem datiem, tiek izveidota reālistiska foto/video versija bez apģērba.",
+      "tryFree": "Pieteikt bezmaksas izmēģinājumu"
+    },
+    "securitySafe": {
+      "title": "Droši un <span class='highlight-ai'>Privāti</span>",
+      "description": "Mēs neizmantojam jūsu attēlus. Tie tiek droši saglabāti tikai jums. Mēs tos neizmantojam citām vajadzībām un nekad nerādām citiem.",
+      "tryFree": "Palaist lietotni",
+      "imageAlt": "Drošības slēdzene"
+    },
+    "faq": {
+      "title": "Biežāk uzdotie jautājumi",
+      "q1": {
+        "question": "Kas ir Undressor?",
+        "answer": "Undressor ir vadošs MI balstīts tiešsaistes rīks, kas digitāli noņem apģērbu no attēliem. Izmantojot jaunākās tehnoloģijas un uzlabotus algoritmus, tas nodrošina ļoti reālistiskus un kvalitatīvus rezultātus. Undressor ir viens no labākajiem MI apģērbu noņemšanas un atklāšanas rīkiem pasaulē."
+      },
+      "q2": {
+        "question": "Vai mani dati ir droši?",
+        "answer": "Jā. Visi foto apstrādes procesi tiek veikti droši un privāti. Jūsu faili netiek kopīgoti – jūsu privātums ir mūsu galvenā prioritāte."
+      },
+      "q3": {
+        "question": "Vai ir pieejams bezmaksas izmēģinājums?",
+        "answer": "Jā, jūs varat izmēģināt Undressor bezmaksas izmēģinājuma versijā, kas ļauj iepazīties ar galvenajām funkcijām pirms pārejas uz premium plānu."
+      },
+      "q4": {
+        "question": "Kādus attēlu formātus varu augšupielādēt?",
+        "answer": "Undressor atbalsta populārus attēlu formātus, tostarp JPG, JPEG, PNG, AVIF un WebP, kā arī saspiestus attēlus, saņemtus caur Telegram, nodrošinot saderību ar gandrīz jebkuru attēlu."
+      },
+      "q5": {
+        "question": "Kādās ierīcēs tas darbojas?",
+        "answer": "Undressor MI darbojas visās ierīcēs – datorā, planšetē un mobilajā ierīcē. Tas atbalsta iOS, Android un PC. To var izmantot jebkurā laikā MI balstītai foto pārveidošanai. Undressor ir pieejams arī kā lietotnes Telegram un WhatsApp ātrai piekļuvei."
+      },
+      "q6": {
+        "question": "Kur varu redzēt Undressor MI piemērus?",
+        "answer": "Jūs varat apskatīt piemērus mūsu Telegram blogā, kur pieejami vizuāli materiāli un demonstrācijas, kā Undressor darbojas ar dažāda veida attēliem."
+      },
+      "q7": {
+        "question": "Vai Undressor var izmantot arī video?",
+        "answer": "Jā! Undressor tagad atbalsta attēlu pārvēršanu video, ļaujot augšupielādēt īsus klipus vai attēlus un pārvērst tos plūstošā, reālistiskā apģērbu noņemšanas saturā. Mūsu MI pielāgojas kustībai, apgaismojumam un sejas izteiksmēm, nodrošinot dzīvotspējīgu un nevainojamu rezultātu."
+      }
+    },
+    "review": {
+      "users": {
+        "title": "5 000+ lietotāji",
+        "subtitle": "katru dienu apmeklē mūsu vietni"
+      },
+      "userFriendly": {
+        "title": "Lietotājam draudzīgs",
+        "subtitle": "un intuitīvs interfeiss"
+      },
+      "topQuality": {
+        "title": "Augstākā kvalitāte",
+        "subtitle": "Labākā kvalitāte tirgū"
+      },
+      "secure": {
+        "title": "Droši",
+        "subtitle": "Jūsu dati ir drošībā"
+      }
+    },
+    "footer": {
+      "allRights": "Visas tiesības aizsargātas"
+    }
+  }
+  
