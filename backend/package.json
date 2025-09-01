@@ -12,9 +12,11 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
+    "detect-browser": "^5.3.0",
     "express": "^4.21.2",
     "express-cache-controller": "^1.1.0",
-    "mysql2": "^3.14.1",
+    "geoip-lite": "^1.4.10",
+    "mysql2": "^3.14.3",
     "sqlite3": "^5.1.7"
   }
 }
