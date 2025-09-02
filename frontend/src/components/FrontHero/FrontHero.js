@@ -7,6 +7,20 @@ import metaData from "../../metaData/metaData";
 const FrontHeroHeader = () => {
   const { t } = useTranslation();
 
+  // Функция для логирования клика
+  const handleClick = async (button) => {
+    try {
+      await fetch("http://localhost:5001/api/buttons/click", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ button }),
+      });
+      console.log(`${button} click recorded`);
+    } catch (err) {
+      console.error("Error logging button click:", err);
+    }
+  };
+
   return (
     <div className="front-hero__header">
       <div className="front-hero__logo">
@@ -27,6 +41,7 @@ const FrontHeroHeader = () => {
           href="https://t.me/TestBeta123bot"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => handleClick("telegram")}
         >
           {t("telegram")}
         </a>
@@ -36,9 +51,12 @@ const FrontHeroHeader = () => {
           href="https://wa.me/37100000000"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => handleClick("whatsapp")}
         >
-           {t("whatsapp")}
+          {t("whatsapp")}
         </a>
+
+     
       </div>
     </div>
   );
@@ -71,15 +89,6 @@ const FrontHero = () => {
             dangerouslySetInnerHTML={{ __html: t("title") }}
           />
           <p className="FrontHero-Text">{t("description")}</p>
-
-          <a
-            className="glow-button"
-            href="https://t.me/TestBeta123bot"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("tryFree")}
-          </a>
         </div>
         <div className="front-hero__media">
           <img
