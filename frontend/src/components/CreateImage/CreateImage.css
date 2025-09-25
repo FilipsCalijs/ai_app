@@ -1,0 +1,56 @@
+/* Контейнер страницы */
+.create-image-page {
+    padding: 80px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* светлый фон страницы */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  /* Заголовок страницы */
+  .create-image-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Текст */
+  .create-image-page p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+  }
+  
+  /* Кнопка выхода */
+  .logout-button {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4285F4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #3367D6;
+  }
+  
+  /* Футер */
+  .create-image-page footer {
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #333; /* тёмный фон футера */
+    color: #fff; /* белый текст */
+    font-size: 0.9rem;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* лёгкая тень сверху */
+  }
+  

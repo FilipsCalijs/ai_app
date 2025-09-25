@@ -93,7 +93,7 @@ const FrontHero = () => {
         <div className="front-hero__media">
           <img
             className="front-hero__image"
-            src="/preview-photo/preivew.jpg"
+            src="/preview-photo/pалеreivew.jpg"
             alt={t("title")}
             width={200}
             height={200}

@@ -5,10 +5,10 @@
     "total": 2
   },
   "telegram": {
-    "today": 6,
-    "week": 6,
-    "total": 6
+    "today": 1,
+    "week": 4,
+    "total": 4
   },
-  "lastResetDay": "Tue Sep 02 2025",
+  "lastResetDay": "Sat Sep 06 2025",
   "lastResetWeek": 36
 }

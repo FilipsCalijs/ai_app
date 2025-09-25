@@ -1,6 +1,12 @@
 // src/App.js
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 // Компоненты
@@ -15,12 +21,27 @@ import Footer from "./components/Footer/Footer";
 import ModalWindow from "./components/ModalWindow/ModalWindow";
 import RulesModal from "./components/RulesModal/RulesModal";
 import NotFound from "./components/NotFound/NotFound";
+import usePageTimeTracking from "./usePageTimeTracking";
+import CreateImage from "./components/CreateImage/CreateImage"; 
+import { useAuth } from "./components/AuthContext/AuthContext";
 
-// Логирование
-import { logVisit, trackClicks, trackScroll, logTime, trackPageView } from "./log";
+// Проверка на prerender
+const isPrerender =
+  typeof navigator !== "undefined" && navigator.userAgent === "ReactSnap";
 
-// Список поддерживаемых языков
-const supportedLanguages = ["ru", "de", "es", "hi", "ja", "id", "lv", "br", "kr", "ph", "lv"]; // en — по умолчанию
+// Список поддерживаемых языков (без en)
+const supportedLanguages = [
+  "ru",
+  "de",
+  "es",
+  "hi",
+  "ja",
+  "id",
+  "lv",
+  "br",
+  "kr",
+  "ph",
+];
 
 // Универсальная обертка для языковой версии
 function LanguageWrapper({ lang }) {
@@ -46,42 +67,34 @@ function LanguageWrapper({ lang }) {
 
 // Основной контент приложения
 function AppContent() {
+  const navigate = useNavigate();
   const location = useLocation();
   const { i18n } = useTranslation();
   const [showModal, setShowModal] = useState(false);
   const [rulesAccepted, setRulesAccepted] = useState(false);
 
-  // -----------------------
-  // Логирование
-  // -----------------------
-  useEffect(() => {
-    logVisit();                      // визит на сайт
-    trackClicks();                   // клики
-    trackScroll();                   // скролл
-    trackPageView(location.pathname); // текущая страница
-
-    window.addEventListener("beforeunload", logTime); // время на странице
-    return () => {
-      logTime();
-      window.removeEventListener("beforeunload", logTime);
-    };
-  }, [location.pathname]);
+  usePageTimeTracking();
 
   // -----------------------
-  // Синхронизация языка с URL
+  // Синхронизация языка с URL + редирект с /en → /
   // -----------------------
   useEffect(() => {
     const pathLang = location.pathname.split("/")[1];
-    if (supportedLanguages.includes(pathLang)) {
+
+    if (pathLang === "en") {
+      // Если путь начинается с /en → ставим язык английский и редиректим на /
+      if (i18n.language !== "en") i18n.changeLanguage("en");
+      if (location.pathname !== "/") navigate("/", { replace: true });
+    } else if (supportedLanguages.includes(pathLang)) {
+      // Если язык поддерживается → меняем язык
       if (i18n.language !== pathLang) i18n.changeLanguage(pathLang);
     } else if (i18n.language !== "en") {
+      // Все остальные → язык по умолчанию (en)
       i18n.changeLanguage("en");
     }
-  }, [location.pathname, i18n]);
+  }, [location.pathname, i18n, navigate]);
 
-  // -----------------------
   // Проверка принятия правил
-  // -----------------------
   useEffect(() => {
     const accepted = localStorage.getItem("rulesAccepted");
     if (accepted === "true") setRulesAccepted(true);
@@ -92,9 +105,7 @@ function AppContent() {
     setRulesAccepted(true);
   };
 
-  // -----------------------
   // Модальное окно на /create-image
-  // -----------------------
   useEffect(() => {
     let timer;
     if (location.pathname === "/create-image") {
@@ -111,7 +122,7 @@ function AppContent() {
         {showModal && <ModalWindow onClose={() => setShowModal(false)} />}
 
         <Routes>
-          {/* Английская версия по умолчанию */}
+          {/* Главная страница (английская по умолчанию) */}
           <Route
             path="/"
             element={
@@ -130,8 +141,13 @@ function AppContent() {
 
           {/* Языковые версии */}
           {supportedLanguages.map((lang) => (
-            <Route key={lang} path={`/${lang}/*`} element={<LanguageWrapper lang={lang} />} />
+            <Route
+              key={lang}
+              path={`/${lang}/*`}
+              element={<LanguageWrapper lang={lang} />}
+            />
           ))}
+            <Route path="/create-image" element={<CreateImage />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFound />} />

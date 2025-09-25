@@ -1,9 +1,10 @@
 // src/components/SliderCompare/SliderCompare.js
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ImageCompareAuto from '../ImageCompareAuto/ImageCompareAuto';
 import '../ImageCompareAuto/ImageCompareAuto.css';
 import './SliderCompare.css';
 import { useTranslation } from 'react-i18next';
+import AuthModal from '../AuthModal/AuthModal'; // подключаем модалку
 
 const slides = [
   { id: 'slide-1', before: '/slide/before.webp', after: '/slide/after.webp' },
@@ -16,6 +17,9 @@ const SliderCompare = () => {
   const slideCount = slides.length;
   const intervalTime = 5000; // 5 секунд
   const { t } = useTranslation();
+
+  // состояние для модального окна
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   useEffect(() => {
     const slider = sliderRef.current;
@@ -43,23 +47,19 @@ const SliderCompare = () => {
       <div className="content-wrapper">
         {/* Текстовая часть */}
         <div className="text-content">
-        <h2
-  className="title"
-  dangerouslySetInnerHTML={{ __html: t('sliderCompare.title') }}
-/>
-
-
+          <h2
+            className="title"
+            dangerouslySetInnerHTML={{ __html: t('sliderCompare.title') }}
+          />
           <p className="description">
             {t('sliderCompare.description')}
           </p>
-          <a
+          <button
             className="glow-button"
-            href="https://t.me/TestBeta123bot"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => setIsAuthModalOpen(true)} // открытие модалки
           >
             {t('sliderCompare.tryFree')}
-          </a>
+          </button>
         </div>
 
         {/* Слайдер */}
@@ -91,6 +91,9 @@ const SliderCompare = () => {
           </div>
         </div>
       </div>
+
+      {/* Модальное окно */}
+      {isAuthModalOpen && <AuthModal onClose={() => setIsAuthModalOpen(false)} />}
     </section>
   );
 };
